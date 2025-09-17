@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\aplicacionpedidos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:aplicacionpedidos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\models\\orderitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\orderitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\data\\dbpedidoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:data\\dbpedidoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\progra_web_iii\\webproyectos\\webproyectos\\aplicacionpedidos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,12 +50,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AplicacionPedidos",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T00:03:15.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Views\\Home\\Index.cshtml*",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-17T00:03:50.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T00:02:13.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderItemModel.cs",
+              "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Models\\OrderItemModel.cs",
+              "RelativeDocumentMoniker": "Models\\OrderItemModel.cs",
+              "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Models\\OrderItemModel.cs",
+              "RelativeToolTip": "Models\\OrderItemModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T23:32:14.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderModel.cs",
+              "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Models\\OrderModel.cs",
+              "RelativeDocumentMoniker": "Models\\OrderModel.cs",
+              "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Models\\OrderModel.cs",
+              "RelativeToolTip": "Models\\OrderModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T23:31:56.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Models\\ProductModel.cs",
+              "RelativeDocumentMoniker": "Models\\ProductModel.cs",
+              "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Models\\ProductModel.cs",
+              "RelativeToolTip": "Models\\ProductModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T23:31:40.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "Models\\UserModel.cs",
+              "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Models\\UserModel.cs",
+              "RelativeToolTip": "Models\\UserModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T23:31:21.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DBPedidosContext.cs",
+              "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Data\\DBPedidosContext.cs",
+              "RelativeDocumentMoniker": "Data\\DBPedidosContext.cs",
+              "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\Data\\DBPedidosContext.cs",
+              "RelativeToolTip": "Data\\DBPedidosContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T23:23:49.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AplicacionPedidos.csproj",
               "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj",
               "RelativeDocumentMoniker": "AplicacionPedidos.csproj",
               "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj",
@@ -35,20 +171,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "D:\\Progra_Web_III\\WebProyectos\\WebProyectos\\AplicacionPedidos\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-16T23:00:38.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "WhenOpened": "2025-09-16T23:00:38.521Z"
             }
           ]
         }
