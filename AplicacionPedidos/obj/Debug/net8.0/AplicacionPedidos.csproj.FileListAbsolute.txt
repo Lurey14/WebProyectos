@@ -279,3 +279,11 @@ D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\r
 D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\AplicacionPedidos.pdb
 D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\AplicacionPedidos.genruntimeconfig.cache
 D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\ref\AplicacionPedidos.dll
+D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\Progra_Web_III\WebProyectos\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
