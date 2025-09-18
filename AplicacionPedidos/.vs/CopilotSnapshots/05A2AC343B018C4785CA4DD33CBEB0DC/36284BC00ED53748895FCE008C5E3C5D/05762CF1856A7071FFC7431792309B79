@@ -1,0 +1,5 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Aplicacion de Pedidos</h1>
