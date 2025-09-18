@@ -1,0 +1,200 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using AplicacionPedidos.Data;
+using AplicacionPedidos.Models;
+
+namespace AplicacionPedidos.Controllers
+{
+    public class ProductModelsController : Controller
+    {
+        private readonly DBPedidosContext _context;
+
+        public ProductModelsController(DBPedidosContext context)
+        {
+            _context = context;
+        }
+
+        // GET: ProductModels
+        public async Task<IActionResult> Index(string searchString, decimal? minPrice, decimal? maxPrice, string sortOrder)
+        {
+            // Creamos ViewData para mantener los parámetros de filtrado en las vistas
+            ViewData["CurrentFilter"] = searchString;
+            ViewData["MinPriceFilter"] = minPrice;
+            ViewData["MaxPriceFilter"] = maxPrice;
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["PriceSortParm"] = sortOrder == "price_asc" ? "price_desc" : "price_asc";
+
+            // Consulta base
+            var products = from p in _context.Products select p;
+
+            // Filtro por nombre
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(p => p.Nombre.Contains(searchString) || 
+                                           p.Descripcion.Contains(searchString));
+            }
+
+            // Filtro por precio mínimo
+            if (minPrice.HasValue)
+            {
+                products = products.Where(p => p.Precio >= minPrice.Value);
+            }
+
+            // Filtro por precio máximo
+            if (maxPrice.HasValue)
+            {
+                products = products.Where(p => p.Precio <= maxPrice.Value);
+            }
+
+            // Ordenamiento
+            switch (sortOrder)
+            {
+                case "price_asc":
+                    products = products.OrderBy(p => p.Precio);
+                    break;
+                case "price_desc":
+                    products = products.OrderByDescending(p => p.Precio);
+                    break;
+                default:
+                    products = products.OrderBy(p => p.Nombre);
+                    break;
+            }
+
+            return View(await products.ToListAsync());
+        }
+
+        // GET: ProductModels/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var productModel = await _context.Products
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (productModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(productModel);
+        }
+
+        // GET: ProductModels/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: ProductModels/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion,Precio,Stock")] ProductModel productModel)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(productModel);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(productModel);
+        }
+
+        // GET: ProductModels/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var productModel = await _context.Products.FindAsync(id);
+            if (productModel == null)
+            {
+                return NotFound();
+            }
+            return View(productModel);
+        }
+
+        // POST: ProductModels/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion,Precio,Stock")] ProductModel productModel)
+        {
+            if (id != productModel.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(productModel);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ProductModelExists(productModel.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(productModel);
+        }
+
+        // GET: ProductModels/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var productModel = await _context.Products
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (productModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(productModel);
+        }
+
+        // POST: ProductModels/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var productModel = await _context.Products.FindAsync(id);
+            if (productModel != null)
+            {
+                _context.Products.Remove(productModel);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool ProductModelExists(int id)
+        {
+            return _context.Products.Any(e => e.Id == id);
+        }
+    }
+}

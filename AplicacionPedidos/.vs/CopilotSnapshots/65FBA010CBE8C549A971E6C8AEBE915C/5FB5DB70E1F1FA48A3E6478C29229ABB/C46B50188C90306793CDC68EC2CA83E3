@@ -1,0 +1,289 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using AplicacionPedidos.Data;
+using AplicacionPedidos.Models;
+
+namespace AplicacionPedidos.Controllers
+{
+    public class OrderModelsController : Controller
+    {
+        private readonly DBPedidosContext _context;
+
+        public OrderModelsController(DBPedidosContext context)
+        {
+            _context = context;
+        }
+
+        // GET: OrderModels
+        public async Task<IActionResult> Index()
+        {
+            // Incluir la información del cliente
+            var orders = await _context.Orders
+                .Include(o => o.Cliente)
+                .OrderByDescending(o => o.Fecha)
+                .ToListAsync();
+            return View(orders);
+        }
+
+        // GET: OrderModels/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var orderModel = await _context.Orders
+                .Include(o => o.Cliente)
+                .Include(o => o.Items)
+                    .ThenInclude(i => i.Producto)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (orderModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(orderModel);
+        }
+
+        // GET: OrderModels/Create
+        public IActionResult Create()
+        {
+            // Cargar la lista de usuarios para el dropdown
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Nombre");
+            
+            // Inicializar un nuevo pedido con valores predeterminados
+            var newOrder = new OrderModel
+            {
+                Fecha = DateTime.Now,
+                Estado = "Pendiente",
+                Total = 0
+            };
+            
+            return View(newOrder);
+        }
+
+        // POST: OrderModels/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,UserId,Fecha,Estado,Total")] OrderModel orderModel)
+        {
+            if (ModelState.IsValid)
+            {
+                // Si la fecha está vacía, asignar la fecha actual
+                if (orderModel.Fecha == DateTime.MinValue)
+                {
+                    orderModel.Fecha = DateTime.Now;
+                }
+                
+                // Si no se ha especificado un estado, establecer "Pendiente" por defecto
+                if (string.IsNullOrEmpty(orderModel.Estado))
+                {
+                    orderModel.Estado = "Pendiente";
+                }
+                
+                _context.Add(orderModel);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Details), new { id = orderModel.Id });
+            }
+            
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Nombre", orderModel.UserId);
+            return View(orderModel);
+        }
+
+        // GET: OrderModels/CreateQuick
+        public IActionResult CreateQuick()
+        {
+            // Cargar la lista de usuarios para el dropdown
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Nombre");
+            
+            // Cargar la lista de productos disponibles
+            ViewData["Products"] = _context.Products.Where(p => p.Stock > 0).ToList();
+            
+            return View();
+        }
+
+        // POST: OrderModels/CreateQuick
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateQuick(int userId, List<int> productIds, List<int> quantities)
+        {
+            if (userId == 0 || productIds == null || quantities == null || !productIds.Any())
+            {
+                ModelState.AddModelError("", "Debe seleccionar un cliente y al menos un producto");
+                ViewData["UserId"] = new SelectList(_context.Users, "Id", "Nombre");
+                ViewData["Products"] = _context.Products.Where(p => p.Stock > 0).ToList();
+                return View();
+            }
+            
+            try
+            {
+                // Crear el pedido
+                var order = new OrderModel
+                {
+                    UserId = userId,
+                    Fecha = DateTime.Now,
+                    Estado = "Pendiente",
+                    Total = 0,
+                    Items = new List<OrderItemModel>()
+                };
+
+                decimal totalPedido = 0;
+
+                // Añadir los productos seleccionados como items del pedido
+                for (int i = 0; i < productIds.Count; i++)
+                {
+                    int productId = productIds[i];
+                    int quantity = quantities[i];
+                    
+                    if (quantity <= 0)
+                        continue;
+                        
+                    var product = await _context.Products.FindAsync(productId);
+                    
+                    if (product == null || product.Stock < quantity)
+                        continue;
+                        
+                    var subtotal = product.Precio * quantity;
+                    totalPedido += subtotal;
+                    
+                    var item = new OrderItemModel
+                    {
+                        ProductoId = productId,
+                        Cantidad = quantity,
+                        Subtotal = subtotal
+                    };
+                    
+                    order.Items.Add(item);
+                }
+                
+                // Actualizar el total del pedido
+                order.Total = totalPedido;
+                
+                if (order.Items.Count > 0)
+                {
+                    _context.Orders.Add(order);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Details), new { id = order.Id });
+                }
+                else
+                {
+                    ModelState.AddModelError("", "No se pudo crear el pedido porque no hay productos válidos");
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", $"Error al crear el pedido: {ex.Message}");
+            }
+            
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Nombre", userId);
+            ViewData["Products"] = _context.Products.Where(p => p.Stock > 0).ToList();
+            return View();
+        }
+
+        // GET: OrderModels/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var orderModel = await _context.Orders.FindAsync(id);
+            if (orderModel == null)
+            {
+                return NotFound();
+            }
+            
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Nombre", orderModel.UserId);
+            return View(orderModel);
+        }
+
+        // POST: OrderModels/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserId,Fecha,Estado,Total")] OrderModel orderModel)
+        {
+            if (id != orderModel.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(orderModel);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!OrderModelExists(orderModel.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Nombre", orderModel.UserId);
+            return View(orderModel);
+        }
+
+        // GET: OrderModels/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var orderModel = await _context.Orders
+                .Include(o => o.Cliente)
+                .FirstOrDefaultAsync(m => m.Id == id);
+                
+            if (orderModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(orderModel);
+        }
+
+        // POST: OrderModels/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var orderModel = await _context.Orders
+                .Include(o => o.Items)
+                .FirstOrDefaultAsync(m => m.Id == id);
+                
+            if (orderModel != null)
+            {
+                // Eliminar los items del pedido primero
+                _context.OrderItems.RemoveRange(orderModel.Items);
+                // Luego eliminar el pedido
+                _context.Orders.Remove(orderModel);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool OrderModelExists(int id)
+        {
+            return _context.Orders.Any(e => e.Id == id);
+        }
+    }
+}
