@@ -1,0 +1,114 @@
+﻿@model IEnumerable<AplicacionPedidos.Models.UserModel>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 style="color: #1C3150;">Gestión de Usuarios</h1>
+        <a asp-action="Create" class="btn btn-primary-custom">
+            <i class="bi bi-plus-circle me-2"></i>Nuevo Usuario
+        </a>
+    </div>
+    
+    <div class="card custom-card">
+        <div class="card-header card-header-primary py-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Lista de Usuarios</h5>
+                <div class="input-group" style="max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Buscar usuario..." id="searchInput">
+                    <button class="btn btn-light" type="button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0" id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class="bi bi-person me-1"></i>
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </th>
+                            <th>
+                                <i class="bi bi-envelope me-1"></i>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                            <th>
+                                <i class="bi bi-key me-1"></i>
+                                @Html.DisplayNameFor(model => model.Password)
+                            </th>
+                            <th>
+                                <i class="bi bi-person-badge me-1"></i>
+                                @Html.DisplayNameFor(model => model.Rol)
+                            </th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                ••••••••
+                            </td>
+                            <td>
+                                <span class="badge" style="background-color: #4D6489;">
+                                    @Html.DisplayFor(modelItem => item.Rol)
+                                </span>
+                            </td>
+                            <td class="action-buttons">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary" title="Editar">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info" title="Detalles">
+                                    <i class="bi bi-info-circle"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer bg-white">
+            <nav aria-label="Paginación de usuarios">
+                <ul class="pagination justify-content-center mb-0">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Siguiente</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function(){
+            $("#searchInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#usersTable tbody tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}

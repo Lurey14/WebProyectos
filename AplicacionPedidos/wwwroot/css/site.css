@@ -36,6 +36,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #f8f9fa;
 }
 
 .navbar {
@@ -52,6 +53,12 @@ body {
 .nav-link {
     color: white !important;
     padding: 0.5rem 1rem !important;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
 }
 
 .welcome-section {
@@ -76,13 +83,15 @@ body {
     color: var(--primary-dark);
     border: none;
     padding: 0.5rem 1.5rem;
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: 500;
+    transition: all 0.2s ease;
 }
 
     .btn-login:hover {
         background-color: #cdb5ae;
         color: var(--primary-dark);
+        transform: translateY(-2px);
     }
 
 .navbar .bi {
@@ -182,11 +191,15 @@ footer {
 .btn-primary-custom {
     background-color: var(--primary-dark);
     color: white;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: none;
 }
 
     .btn-primary-custom:hover {
         background-color: var(--primary-medium);
         color: white;
+        transform: translateY(-2px);
     }
 
 .dropdown-menu {
@@ -217,6 +230,8 @@ footer {
         background-color: var(--primary-medium);
         color: white;
         border-bottom: none;
+        font-weight: 500;
+        vertical-align: middle;
     }
 
 .table-hover tbody tr:hover {
@@ -233,4 +248,107 @@ footer {
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     padding: 2rem;
+}
+
+/* Nuevos estilos para la tabla de usuarios */
+.users-table th, .users-table td {
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+}
+
+.users-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.users-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.users-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.badge {
+    padding: 0.4rem 0.75rem;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.badge-admin {
+    background-color: var(--primary-dark);
+}
+
+.badge-cliente {
+    background-color: var(--primary-light);
+}
+
+.badge-empleado {
+    background-color: var(--accent-light);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding-right: 40px;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+}
+
+.search-container .search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.btn-group .btn {
+    border-radius: 4px;
+    margin-right: 4px;
+    transition: all 0.15s ease;
+}
+
+.btn-group .btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-medium);
+    border-color: var(--primary-medium);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-medium);
+    color: white;
+    border-color: var(--primary-medium);
+}
+
+.btn-outline-info {
+    color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.btn-outline-info:hover {
+    background-color: var(--primary-light);
+    color: white;
+    border-color: var(--primary-light);
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-medium);
+    border-color: var(--primary-medium);
+}
+
+.page-link {
+    color: var(--primary-medium);
+}
+
+.page-link:hover {
+    color: var(--primary-dark);
+    background-color: rgba(77, 100, 137, 0.1);
 }

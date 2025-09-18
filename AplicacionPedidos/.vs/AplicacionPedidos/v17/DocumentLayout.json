@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\usermodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\usermodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\UserModels\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\UserModels\\Index.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\UserModels\\Index.cshtml",
+              "RelativeToolTip": "Views\\UserModels\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T20:08:39.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "site.css",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAMQAAAAAAAAAAAAiwOsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-09-18T19:50:59.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-18T18:41:55.42Z",
               "EditorCaption": ""
