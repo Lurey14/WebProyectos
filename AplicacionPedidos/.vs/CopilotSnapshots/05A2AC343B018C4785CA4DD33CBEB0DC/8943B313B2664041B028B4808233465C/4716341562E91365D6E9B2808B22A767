@@ -1,0 +1,124 @@
+﻿@model AplicacionPedidos.Models.ProductModel
+
+@{
+    ViewData["Title"] = "Crear Producto";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold" style="color: #1C3150;">Crear Nuevo Producto</h1>
+        <a asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-2"></i>Volver a la Lista
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card custom-card">
+                <div class="card-header card-header-primary py-3" style="background-color: #4D6489; color: white;">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-box-seam me-2"></i>Información del Producto</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Create" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-8">
+                                <label asp-for="Nombre" class="form-label fw-bold" style="color: #1C3150;">Nombre</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-tag"></i></span>
+                                    <input asp-for="Nombre" class="form-control" placeholder="Nombre del producto" />
+                                </div>
+                                <span asp-validation-for="Nombre" class="text-danger"></span>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <label asp-for="Categoria" class="form-label fw-bold" style="color: #1C3150;">Categoría</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-bookmark"></i></span>
+                                    <select asp-for="Categoria" asp-items="ViewBag.Categorias" class="form-select">
+                                        <option value="">Seleccionar categoría</option>
+                                    </select>
+                                </div>
+                                <span asp-validation-for="Categoria" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="Descripcion" class="form-label fw-bold" style="color: #1C3150;">Descripción</label>
+                            <textarea asp-for="Descripcion" class="form-control" rows="3" placeholder="Descripción detallada del producto"></textarea>
+                            <span asp-validation-for="Descripcion" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="Precio" class="form-label fw-bold" style="color: #1C3150;">Precio</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-currency-dollar"></i></span>
+                                    <input asp-for="Precio" class="form-control" placeholder="0.00" />
+                                </div>
+                                <span asp-validation-for="Precio" class="text-danger"></span>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label asp-for="Stock" class="form-label fw-bold" style="color: #1C3150;">Stock</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-boxes"></i></span>
+                                    <input asp-for="Stock" class="form-control" placeholder="0" />
+                                </div>
+                                <span asp-validation-for="Stock" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label asp-for="ImagenFile" class="form-label fw-bold" style="color: #1C3150;">Imagen del Producto</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="bi bi-image"></i></span>
+                                <input type="file" asp-for="ImagenFile" class="form-control" id="imageFile" accept="image/*" />
+                            </div>
+                            <div class="image-preview text-center p-3" style="display: none; border: 2px dashed #ddd; border-radius: 8px;">
+                                <img id="preview" src="#" alt="Vista previa" style="max-height: 200px; max-width: 100%;" />
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary-custom" style="background-color: #1C3150; color: white;">
+                                <i class="bi bi-plus-circle me-2"></i>Crear Producto
+                            </button>
+                            <button type="reset" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-counterclockwise me-2"></i>Limpiar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        $(document).ready(function() {
+            $("#imageFile").change(function() {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    
+                    reader.onload = function(e) {
+                        $('#preview').attr('src', e.target.result);
+                        $('.image-preview').show();
+                    }
+                    
+                    reader.readAsDataURL(this.files[0]);
+                } else {
+                    $('.image-preview').hide();
+                }
+            });
+            
+            $("button[type='reset']").click(function() {
+                $('.image-preview').hide();
+            });
+        });
+    </script>
+}

@@ -1,4 +1,7 @@
+wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\products\1c23d635-e92f-44ba-8ffe-e133bba00987_12.jpg
+wwwroot\images\products\no-image.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -34,4 +37,3 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\site.css
