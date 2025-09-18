@@ -160,3 +160,77 @@ footer {
     width: 16px;
     text-align: center;
 }
+
+.custom-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .custom-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    }
+
+.card-header-primary {
+    background-color: var(--primary-medium);
+    color: white;
+    border-bottom: none;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+    .btn-primary-custom:hover {
+        background-color: var(--primary-medium);
+        color: white;
+    }
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--accent-beige);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.table {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+    .table thead th {
+        background-color: var(--primary-medium);
+        color: white;
+        border-bottom: none;
+    }
+
+.table-hover tbody tr:hover {
+    background-color: rgba(77, 100, 137, 0.05);
+}
+
+.action-buttons a {
+    margin-right: 0.5rem;
+    color: var(--primary-medium);
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}

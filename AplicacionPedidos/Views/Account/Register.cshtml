@@ -1,0 +1,93 @@
+@model AplicacionPedidos.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-0" style="background-color: #fff; border-radius: 15px; overflow: hidden;">
+                <div class="card-header border-0 py-4" style="background-color: #4D6489; color: white;">
+                    <h2 class="text-center mb-0">@ViewData["Title"]</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-4"></div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="Nombre" class="form-label fw-bold" style="color: #1C3150;">Nombre</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                    <input asp-for="Nombre" class="form-control" placeholder="Nombre completo" />
+                                </div>
+                                <span asp-validation-for="Nombre" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="Email" class="form-label fw-bold" style="color: #1C3150;">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                    <input asp-for="Email" class="form-control" placeholder="ejemplo@correo.com" />
+                                </div>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="Password" class="form-label fw-bold" style="color: #1C3150;">Contraseña</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                    <input asp-for="Password" class="form-control" placeholder="Contraseña" />
+                                </div>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                                <small class="form-text text-muted">La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.</small>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="ConfirmPassword" class="form-label fw-bold" style="color: #1C3150;">Confirmar contraseña</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                    <input asp-for="ConfirmPassword" class="form-control" placeholder="Repite la contraseña" />
+                                </div>
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <label asp-for="Role" class="form-label fw-bold" style="color: #1C3150;">Tipo de Usuario</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
+                                    <select asp-for="Role" class="form-select">
+                                        @foreach (var role in Model.Roles)
+                                        {
+                                            <option value="@role">@role</option>
+                                        }
+                                    </select>
+                                </div>
+                                <span asp-validation-for="Role" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="submit" class="btn btn-lg" style="background-color: #1C3150; color: white;">
+                                <i class="bi bi-person-plus me-2"></i> Registrarse
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer border-0 p-4 text-center" style="background-color: #f8f9fa;">
+                    <p class="mb-0">¿Ya tienes una cuenta? <a asp-action="Login" style="color: #4D6489;">Inicia sesión aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

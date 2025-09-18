@@ -1,0 +1,58 @@
+﻿using Microsoft.EntityFrameworkCore;
+using AplicacionPedidos.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+
+namespace AplicacionPedidos.Data
+{
+    public class DBPedidosContext : IdentityDbContext<ApplicationUser>
+    {
+        public DBPedidosContext(DbContextOptions<DBPedidosContext> options) : base(options) { }
+        public DbSet<UserModel> Users { get; set; }
+        public DbSet<ProductModel> Products { get; set; }
+        public DbSet<OrderModel> Orders { get; set; }
+        public DbSet<OrderItemModel> OrderItems { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configuración para evitar conflictos de nombres de tablas
+            modelBuilder.Entity<UserModel>().ToTable("CustomUsers");
+
+            // Creación de roles predeterminados
+            modelBuilder.Entity<IdentityRole>().HasData(
+                new IdentityRole { Id = "1", Name = "Admin", NormalizedName = "ADMIN" },
+                new IdentityRole { Id = "2", Name = "Cliente", NormalizedName = "CLIENTE" },
+                new IdentityRole { Id = "3", Name = "Empleado", NormalizedName = "EMPLEADO" }
+            );
+
+            // Creación de un administrador predeterminado (para pruebas)
+            var hasher = new PasswordHasher<ApplicationUser>();
+            modelBuilder.Entity<ApplicationUser>().HasData(
+                new ApplicationUser
+                {
+                    Id = "1",
+                    UserName = "admin@example.com",
+                    NormalizedUserName = "ADMIN@EXAMPLE.COM",
+                    Email = "admin@example.com",
+                    NormalizedEmail = "ADMIN@EXAMPLE.COM",
+                    EmailConfirmed = true,
+                    PasswordHash = hasher.HashPassword(null, "Admin123!"),
+                    SecurityStamp = string.Empty,
+                    Nombre = "Administrador",
+                    Rol = "Admin"
+                }
+            );
+
+            // Asignación de rol al administrador
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string>
+                {
+                    RoleId = "1",
+                    UserId = "1"
+                }
+            );
+        }
+    }
+}

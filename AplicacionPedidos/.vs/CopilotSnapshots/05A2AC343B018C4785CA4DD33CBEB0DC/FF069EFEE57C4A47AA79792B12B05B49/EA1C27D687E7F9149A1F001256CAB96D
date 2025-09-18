@@ -1,0 +1,87 @@
+﻿using Microsoft.EntityFrameworkCore;
+using AplicacionPedidos.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+
+namespace AplicacionPedidos.Data
+{
+    public class DBPedidosContext : IdentityDbContext<ApplicationUser>
+    {
+        public DBPedidosContext(DbContextOptions<DBPedidosContext> options) : base(options) { }
+        public DbSet<UserModel> Users { get; set; }
+        public DbSet<ProductModel> Products { get; set; }
+        public DbSet<OrderModel> Orders { get; set; }
+        public DbSet<OrderItemModel> OrderItems { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configuración para evitar conflictos de nombres de tablas
+            modelBuilder.Entity<UserModel>().ToTable("CustomUsers");
+
+            // Configuración de precisión para propiedades decimales
+            modelBuilder.Entity<OrderItemModel>()
+                .Property(oi => oi.Subtotal)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<OrderModel>()
+                .Property(o => o.Total)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<ProductModel>()
+                .Property(p => p.Precio)
+                .HasColumnType("decimal(18,2)");
+
+            // Creación de roles predeterminados
+            modelBuilder.Entity<IdentityRole>().HasData(
+                new IdentityRole { 
+                    Id = "1", 
+                    Name = "Admin", 
+                    NormalizedName = "ADMIN",
+                    ConcurrencyStamp = "9986c0d7-5713-4585-9d6b-37d23c861143"
+                },
+                new IdentityRole { 
+                    Id = "2", 
+                    Name = "Cliente", 
+                    NormalizedName = "CLIENTE",
+                    ConcurrencyStamp = "3c097f16-3ac0-4891-9c43-a3844c5d1d72"
+                },
+                new IdentityRole { 
+                    Id = "3", 
+                    Name = "Empleado", 
+                    NormalizedName = "EMPLEADO",
+                    ConcurrencyStamp = "ac54e584-9f53-4997-a194-a8e598e84a2d"
+                }
+            );
+
+            // Creación de un administrador predeterminado (para pruebas)
+            var hasher = new PasswordHasher<ApplicationUser>();
+            modelBuilder.Entity<ApplicationUser>().HasData(
+                new ApplicationUser
+                {
+                    Id = "1",
+                    UserName = "admin@example.com",
+                    NormalizedUserName = "ADMIN@EXAMPLE.COM",
+                    Email = "admin@example.com",
+                    NormalizedEmail = "ADMIN@EXAMPLE.COM",
+                    EmailConfirmed = true,
+                    PasswordHash = hasher.HashPassword(null, "Admin123!"),
+                    SecurityStamp = "5f882ab2-8507-4881-b72a-623fd8af53b6",
+                    ConcurrencyStamp = "c8fca028-0ad7-46a3-86b0-a35c532b5212",
+                    Nombre = "Administrador",
+                    Rol = "Admin"
+                }
+            );
+
+            // Asignación de rol al administrador
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string>
+                {
+                    RoleId = "1",
+                    UserId = "1"
+                }
+            );
+        }
+    }
+}

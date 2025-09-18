@@ -568,10 +568,13 @@ D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\
 D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\staticwebassets.development.json
 D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\Aplicaci.86C2E69C.Up2Date
 D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\AplicacionPedidos.dll
 D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\refint\AplicacionPedidos.dll
 D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\AplicacionPedidos.pdb
 D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\AplicacionPedidos.genruntimeconfig.cache
 D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\ref\AplicacionPedidos.dll
+D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\AplicacionPedidos.MvcApplicationPartsAssemblyInfo.cs
+D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
