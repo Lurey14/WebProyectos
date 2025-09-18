@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Accelerometer App</string>
+    <string name="accelerometer_status">Accelerometer Status</string>
+    <string name="movement_detected">Movement Detected</string>
+    <string name="horizontal_movement">Horizontal Movement (X-axis)</string>
+    <string name="vertical_movement">Vertical Movement (Y-axis)</string>
+    <string name="depth_movement">Depth Movement (Z-axis)</string>
+    <string name="free_fall_detected">Free Fall Detected!</string>
+    <string name="no_movement">No significant movement</string>
+    <string name="accelerometer_available">Accelerometer: Available</string>
+    <string name="accelerometer_not_available">Accelerometer: Not Available</string>
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/accelerometerStatusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accelerometer_status"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorAccent"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/movement_detected"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/xAxisTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X-axis: 0.0"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/yAxisTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Y-axis: 0.0"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/zAxisTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Z-axis: 0.0"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/movementTypeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_movement"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/horizontalIndicator"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="X"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:layout_margin="8dp" />
+
+        <TextView
+            android:id="@+id/verticalIndicator"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="Y"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/green"
+            android:textColor="@color/white"
+            android:layout_margin="8dp" />
+
+        <TextView
+            android:id="@+id/depthIndicator"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="Z"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:layout_margin="8dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/freeFallIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@color/orange"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,3 @@
+# This is a placeholder for horizontal_movement.mp3
+# In a real implementation, this would be an actual MP3 audio file
+# for playing when horizontal movement (X-axis) is detected
