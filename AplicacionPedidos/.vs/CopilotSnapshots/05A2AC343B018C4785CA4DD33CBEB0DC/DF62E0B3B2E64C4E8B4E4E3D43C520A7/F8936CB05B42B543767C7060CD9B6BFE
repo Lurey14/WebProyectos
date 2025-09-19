@@ -1,0 +1,55 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace AplicacionPedidos.Migrations
+{
+    /// <inheritdoc />
+    public partial class AgregarColumnasFaltantesPedidos : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            // Agregar columna PrecioUnitario a la tabla OrderItems
+            migrationBuilder.AddColumn<decimal>(
+                name: "PrecioUnitario",
+                table: "OrderItems",
+                type: "decimal(18,2)",
+                nullable: false,
+                defaultValue: 0m);
+
+            // Agregar columna DireccionEntrega a la tabla Orders si no existe
+            migrationBuilder.AddColumn<string>(
+                name: "DireccionEntrega",
+                table: "Orders",
+                type: "nvarchar(200)",
+                maxLength: 200,
+                nullable: false,
+                defaultValue: "");
+
+            // Agregar columna Notas a la tabla Orders si no existe
+            migrationBuilder.AddColumn<string>(
+                name: "Notas",
+                table: "Orders",
+                type: "nvarchar(500)",
+                maxLength: 500,
+                nullable: true);
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "PrecioUnitario",
+                table: "OrderItems");
+
+            migrationBuilder.DropColumn(
+                name: "DireccionEntrega",
+                table: "Orders");
+
+            migrationBuilder.DropColumn(
+                name: "Notas",
+                table: "Orders");
+        }
+    }
+}

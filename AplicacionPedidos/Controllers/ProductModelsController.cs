@@ -185,7 +185,7 @@ namespace AplicacionPedidos.Controllers
                 _context.Add(productModel);
                 await _context.SaveChangesAsync();
 
-                TempData["SuccessMessage"] = "Producto creado con éxito";
+                TempData["SuccessMessage"] = "Producto creado con exito";
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -193,7 +193,7 @@ namespace AplicacionPedidos.Controllers
                 ModelState.AddModelError("", $"Error al crear el producto: {ex.Message}");
                 Console.WriteLine($"ERROR: {ex.Message}\n{ex.StackTrace}");
 
-                var categorias = new List<string> { "Electrónica", "Ropa", "Hogar", "Alimentos", "Juguetes", "Libros", "Otros" };
+                var categorias = new List<string> { "Electronica", "Ropa", "Hogar", "Alimentos", "Juguetes", "Libros", "Otros" };
                 ViewBag.Categorias = new SelectList(categorias);
 
                 return View(productModel);
@@ -214,7 +214,7 @@ namespace AplicacionPedidos.Controllers
                 return NotFound();
             }
 
-            var categorias = new List<string> { "Electrónica", "Ropa", "Hogar", "Alimentos", "Juguetes", "Libros", "Otros" };
+            var categorias = new List<string> { "Electronica", "Ropa", "Hogar", "Alimentos", "Juguetes", "Libros", "Otros" };
             ViewBag.Categorias = new SelectList(categorias);
             return View(productModel);
         }
@@ -265,14 +265,14 @@ namespace AplicacionPedidos.Controllers
 
                 _context.Update(productModel);
                 await _context.SaveChangesAsync();
-                TempData["SuccessMessage"] = "Producto actualizado con éxito";
+                TempData["SuccessMessage"] = "Producto actualizado con exito";
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError("", $"Error al editar el producto: {ex.Message}");
 
-                var categorias = new List<string> { "Electrónica", "Ropa", "Hogar", "Alimentos", "Juguetes", "Libros", "Otros" };
+                var categorias = new List<string> { "Electronica", "Ropa", "Hogar", "Alimentos", "Juguetes", "Libros", "Otros" };
                 ViewBag.Categorias = new SelectList(categorias);
 
                 return View(productModel);
@@ -309,7 +309,7 @@ namespace AplicacionPedidos.Controllers
                 {
                     _context.Products.Remove(productModel);
                     await _context.SaveChangesAsync();
-                    TempData["SuccessMessage"] = "Producto eliminado con éxito";
+                    TempData["SuccessMessage"] = "Producto eliminado con exito";
                 }
                 return RedirectToAction(nameof(Index));
             }

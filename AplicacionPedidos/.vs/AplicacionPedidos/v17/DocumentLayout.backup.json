@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\controllers\\productmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:controllers\\productmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\ordermodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\ordermodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\ordermodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\ordermodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +54,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\OrderModels\\Edit.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Edit.cshtml",
+              "RelativeToolTip": "Views\\OrderModels\\Edit.cshtml",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-19T00:16:57.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\OrderModels\\Delete.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Delete.cshtml",
+              "RelativeToolTip": "Views\\OrderModels\\Delete.cshtml",
+              "ViewState": "AgIAAHkAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-19T00:17:33.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductModelsController.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Controllers\\ProductModelsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductModelsController.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Controllers\\ProductModelsController.cs",
+              "RelativeToolTip": "Controllers\\ProductModelsController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwMcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T20:20:30.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductModels\\Index.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Index.cshtml",
+              "RelativeToolTip": "Views\\ProductModels\\Index.cshtml",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T20:23:53.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderModel.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Models\\OrderModel.cs",
+              "RelativeDocumentMoniker": "Models\\OrderModel.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Models\\OrderModel.cs",
+              "RelativeToolTip": "Models\\OrderModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T00:14:38.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductModels\\Create.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Create.cshtml",
+              "RelativeToolTip": "Views\\ProductModels\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T20:25:30.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductModels\\Details.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Details.cshtml",
+              "RelativeToolTip": "Views\\ProductModels\\Details.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T20:27:36.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductModels\\Edit.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Edit.cshtml",
+              "RelativeToolTip": "Views\\ProductModels\\Edit.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAHoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T20:26:44.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\ProductModels\\Delete.cshtml",
@@ -54,90 +170,24 @@
               "RelativeToolTip": "Views\\ProductModels\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-18T20:28:27.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T20:28:27.58Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\ProductModels\\Details.cshtml",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Details.cshtml",
-              "RelativeToolTip": "Views\\ProductModels\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-18T20:27:36.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\ProductModels\\Edit.cshtml",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Edit.cshtml",
-              "RelativeToolTip": "Views\\ProductModels\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-18T20:26:44.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\ProductModels\\Create.cshtml",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Create.cshtml*",
-              "RelativeToolTip": "Views\\ProductModels\\Create.cshtml*",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAgwJYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-18T20:25:30.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\ProductModels\\Index.cshtml",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Index.cshtml",
-              "RelativeToolTip": "Views\\ProductModels\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-18T20:23:53.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductModelsController.cs",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Controllers\\ProductModelsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductModelsController.cs",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Controllers\\ProductModelsController.cs*",
-              "RelativeToolTip": "Controllers\\ProductModelsController.cs*",
-              "ViewState": "AgIAAEcBAAAAAAAAAAAkwGABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T20:20:30.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "ProductModel.cs",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Models\\ProductModel.cs",
               "RelativeDocumentMoniker": "Models\\ProductModel.cs",
               "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Models\\ProductModel.cs",
               "RelativeToolTip": "Models\\ProductModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T20:19:43.168Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -145,8 +195,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAALIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-18T18:41:55.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T18:41:55.42Z"
             }
           ]
         }

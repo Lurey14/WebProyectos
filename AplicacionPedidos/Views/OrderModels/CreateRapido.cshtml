@@ -1,0 +1,244 @@
+@model AplicacionPedidos.Models.OrderModel
+
+@{
+    ViewData["Title"] = "Pedido Rápido";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold" style="color: #1C3150;">Realizar Pedido Rápido</h1>
+        <a asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-2"></i>Volver a la Lista
+        </a>
+    </div>
+
+    <form asp-action="CreateRapido" id="orderForm">
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+        
+        <div class="row">
+            <!-- Información de envío -->
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow h-100" style="border-radius: 10px;">
+                    <div class="card-header py-3" style="background-color: #4D6489; color: white;">
+                        <h5 class="mb-0 fw-bold"><i class="bi bi-truck me-2"></i>Información de Envío</h5>
+                    </div>
+                    <div class="card-body">
+                        <input type="hidden" asp-for="UserId" />
+                        
+                        <div class="mb-3">
+                            <label asp-for="DireccionEntrega" class="form-label fw-medium">Dirección de Entrega</label>
+                            <textarea asp-for="DireccionEntrega" class="form-control" rows="3" required placeholder="Ingrese su dirección completa para la entrega"></textarea>
+                            <span asp-validation-for="DireccionEntrega" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="Notas" class="form-label fw-medium">Instrucciones de Entrega</label>
+                            <textarea asp-for="Notas" class="form-control" rows="2" placeholder="Detalles adicionales para la entrega (opcional)"></textarea>
+                            <span asp-validation-for="Notas" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="alert alert-info mb-0">
+                            <i class="bi bi-info-circle me-2"></i>
+                            Su pedido será procesado y enviado a la dirección proporcionada.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Selección de productos -->
+            <div class="col-lg-8 mb-4">
+                <div class="card border-0 shadow" style="border-radius: 10px;">
+                    <div class="card-header py-3" style="background-color: #4D6489; color: white;">
+                        <h5 class="mb-0 fw-bold"><i class="bi bi-cart-plus me-2"></i>Seleccione Productos</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                            @foreach (var producto in ViewBag.Productos)
+                            {
+                                <div class="col">
+                                    <div class="card h-100 product-card" data-id="@producto.Id" data-precio="@producto.Precio" data-stock="@producto.Stock">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="@(string.IsNullOrEmpty(producto.ImagenUrl) ? "/images/products/no-image.jpg" : producto.ImagenUrl)" 
+                                                     class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="@producto.Nombre">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title mb-1">@producto.Nombre</h5>
+                                                    <p class="card-text text-muted small mb-2">@(producto.Categoria ?? "Sin categoría")</p>
+                                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                                        <span class="badge bg-secondary">Stock: @producto.Stock</span>
+                                                        <span class="fw-bold text-primary">@producto.Precio.ToString("C")</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="input-group input-group-sm" style="width: 110px;">
+                                                            <button class="btn btn-outline-secondary btn-decrease" type="button">-</button>
+                                                            <input type="number" name="cantidades" value="0" min="0" max="@producto.Stock" 
+                                                                   class="form-control text-center quantity-input" data-id="@producto.Id">
+                                                            <button class="btn btn-outline-secondary btn-increase" type="button">+</button>
+                                                        </div>
+                                                        <input type="hidden" name="productoIds" value="@producto.Id">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">Total del Pedido</h5>
+                                    <h4 class="mb-0 fw-bold" style="color: #1C3150;">
+                                        <span id="orderTotal">$0.00</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-warning" id="emptyCartWarning">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            Seleccione al menos un producto para crear el pedido.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-4 text-center">
+            <a asp-action="Index" class="btn btn-outline-secondary me-2">
+                <i class="bi bi-x-circle me-2"></i>Cancelar
+            </a>
+            <button type="submit" class="btn" id="submitBtn" style="background-color: #1C3150; color: white;">
+                <i class="bi bi-check-circle me-2"></i>Realizar Pedido
+            </button>
+        </div>
+    </form>
+</div>
+
+<style>
+    .product-card {
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0,0,0,.125);
+    }
+    
+    .product-card:hover {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+        transform: translateY(-3px);
+    }
+    
+    .quantity-input {
+        text-align: center;
+    }
+    
+    .quantity-input::-webkit-outer-spin-button,
+    .quantity-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    .quantity-input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        $(document).ready(function() {
+            const formatter = new Intl.NumberFormat('es-BO', {
+                style: 'currency',
+                currency: 'BOB',
+                minimumFractionDigits: 2
+            });
+            
+            // Función para actualizar el total
+            function updateTotal() {
+                let total = 0;
+                $('.product-card').each(function() {
+                    const precio = parseFloat($(this).data('precio')) || 0;
+                    const cantidad = parseInt($(this).find('.quantity-input').val()) || 0;
+                    total += precio * cantidad;
+                });
+                
+                $('#orderTotal').text(formatter.format(total));
+                
+                // Mostrar/ocultar advertencia de carrito vacío
+                if (total > 0) {
+                    $('#emptyCartWarning').hide();
+                    $('#submitBtn').prop('disabled', false);
+                } else {
+                    $('#emptyCartWarning').show();
+                    $('#submitBtn').prop('disabled', true);
+                }
+            }
+            
+            // Evento para disminuir cantidad
+            $('.btn-decrease').click(function() {
+                const input = $(this).closest('.input-group').find('.quantity-input');
+                let value = parseInt(input.val()) || 0;
+                if (value > 0) {
+                    input.val(--value);
+                    updateTotal();
+                }
+            });
+            
+            // Evento para aumentar cantidad
+            $('.btn-increase').click(function() {
+                const input = $(this).closest('.input-group').find('.quantity-input');
+                let value = parseInt(input.val()) || 0;
+                const max = parseInt(input.attr('max')) || 0;
+                
+                if (value < max) {
+                    input.val(++value);
+                    updateTotal();
+                } else {
+                    alert('No hay suficiente stock disponible');
+                }
+            });
+            
+            // Evento al cambiar manualmente el valor
+            $('.quantity-input').on('change', function() {
+                let value = parseInt($(this).val()) || 0;
+                const max = parseInt($(this).attr('max')) || 0;
+                
+                if (value < 0) {
+                    $(this).val(0);
+                    value = 0;
+                } else if (value > max) {
+                    $(this).val(max);
+                    value = max;
+                    alert('No hay suficiente stock disponible');
+                }
+                
+                updateTotal();
+            });
+            
+            // Validación del formulario
+            $('#orderForm').submit(function(e) {
+                let valid = true;
+                let hasProducts = false;
+                
+                $('.quantity-input').each(function() {
+                    const cantidad = parseInt($(this).val()) || 0;
+                    if (cantidad > 0) {
+                        hasProducts = true;
+                    }
+                });
+                
+                if (!hasProducts) {
+                    alert('Debe seleccionar al menos un producto para el pedido');
+                    valid = false;
+                }
+                
+                return valid;
+            });
+            
+            // Inicializar
+            updateTotal();
+        });
+    </script>
+}
