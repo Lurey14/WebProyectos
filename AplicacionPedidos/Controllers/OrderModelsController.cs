@@ -12,6 +12,7 @@ using System.Diagnostics;
 
 namespace AplicacionPedidos.Controllers
 {
+    [Authorize] // Agregamos el decorador para restringir acceso a usuarios autenticados
     public class OrderModelsController : Controller
     {
         private readonly DBPedidosContext _context;
@@ -115,6 +116,11 @@ namespace AplicacionPedidos.Controllers
         {
             try
             {
+                // Sanitización de entradas
+                DireccionEntrega = string.IsNullOrWhiteSpace(DireccionEntrega) ? string.Empty : DireccionEntrega.Trim();
+                Notas = string.IsNullOrWhiteSpace(Notas) ? string.Empty : Notas.Trim();
+                Estado = string.IsNullOrWhiteSpace(Estado) ? "Pendiente" : Estado.Trim();
+
                 if (UserId <= 0)
                 {
                     ModelState.AddModelError("UserId", "El cliente es obligatorio");
@@ -260,6 +266,7 @@ namespace AplicacionPedidos.Controllers
         }
 
         // GET: OrderModels/Edit/5
+        [Authorize(Roles = "Admin,Empleado")] // Solo administradores y empleados pueden editar pedidos
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -285,6 +292,7 @@ namespace AplicacionPedidos.Controllers
         // POST: OrderModels/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Empleado")] // Solo administradores y empleados pueden editar pedidos
         public async Task<IActionResult> Edit(int id, OrderModel orderModel)
         {
             if (id != orderModel.Id)
@@ -294,6 +302,11 @@ namespace AplicacionPedidos.Controllers
 
             try
             {
+                // Sanitización de entradas
+                orderModel.DireccionEntrega = string.IsNullOrWhiteSpace(orderModel.DireccionEntrega) ? string.Empty : orderModel.DireccionEntrega.Trim();
+                orderModel.Notas = string.IsNullOrWhiteSpace(orderModel.Notas) ? string.Empty : orderModel.Notas.Trim();
+                orderModel.Estado = string.IsNullOrWhiteSpace(orderModel.Estado) ? "Pendiente" : orderModel.Estado.Trim();
+                
                 // Solo permitir actualizar el estado y las notas
                 var existingOrder = await _context.Orders
                     .Include(o => o.Items)
@@ -336,6 +349,7 @@ namespace AplicacionPedidos.Controllers
         }
 
         // GET: OrderModels/Delete/5
+        [Authorize(Roles = "Admin")] // Solo administradores pueden eliminar pedidos
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -360,6 +374,7 @@ namespace AplicacionPedidos.Controllers
         // POST: OrderModels/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")] // Solo administradores pueden eliminar pedidos
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var orderModel = await _context.Orders
@@ -401,6 +416,8 @@ namespace AplicacionPedidos.Controllers
 
         // POST: OrderModels/CambiarEstado/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Empleado")] // Solo administradores y empleados pueden cambiar el estado
         public async Task<IActionResult> CambiarEstado(int id, string nuevoEstado)
         {
             var orderModel = await _context.Orders.FindAsync(id);
@@ -408,6 +425,9 @@ namespace AplicacionPedidos.Controllers
             {
                 return NotFound();
             }
+
+            // Sanitizar el estado
+            nuevoEstado = string.IsNullOrWhiteSpace(nuevoEstado) ? "Pendiente" : nuevoEstado.Trim();
 
             if (OrderModel.EstadosDisponibles.Contains(nuevoEstado))
             {
@@ -425,6 +445,7 @@ namespace AplicacionPedidos.Controllers
         }
 
         // GET: OrderModels/CreateRapido
+        [Authorize] // Asegura que solo usuarios autenticados puedan crear pedidos rápidos
         public IActionResult CreateRapido()
         {
             if (User.Identity.IsAuthenticated)
@@ -442,10 +463,16 @@ namespace AplicacionPedidos.Controllers
         // POST: OrderModels/CreateRapido
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize] // Asegura que solo usuarios autenticados puedan crear pedidos rápidos
         public async Task<IActionResult> CreateRapido(OrderModel orderModel, int[] productoIds, int[] cantidades)
         {
             try
             {
+                // Sanitización de entradas
+                orderModel.DireccionEntrega = string.IsNullOrWhiteSpace(orderModel.DireccionEntrega) ? string.Empty : orderModel.DireccionEntrega.Trim();
+                orderModel.Notas = string.IsNullOrWhiteSpace(orderModel.Notas) ? string.Empty : orderModel.Notas.Trim();
+                orderModel.Estado = "Pendiente"; // Estado fijo para pedidos rápidos
+                
                 if (ModelState.IsValid)
                 {
                     if (productoIds == null || productoIds.Length == 0 || cantidades == null || cantidades.Length == 0)
@@ -508,28 +535,38 @@ namespace AplicacionPedidos.Controllers
 
                     orderModel.CalcularTotal();
                     orderModel.Fecha = DateTime.Now;
-                    if (string.IsNullOrEmpty(orderModel.Estado))
-                    {
-                        orderModel.Estado = "Pendiente";
-                    }
+                    orderModel.Estado = "Pendiente"; // Aseguramos que siempre comienza como pendiente
                     
-                    _context.Add(orderModel);
-                    await _context.SaveChangesAsync();
-                    
-                    foreach (var item in orderModel.Items)
+                    // Usar transacción para garantizar integridad de datos
+                    using (var transaction = _context.Database.BeginTransaction())
                     {
-                        var producto = await _context.Products.FindAsync(item.ProductoId);
-                        if (producto != null)
+                        try
                         {
-                            producto.Stock -= item.Cantidad;
-                            _context.Update(producto);
+                            _context.Add(orderModel);
+                            await _context.SaveChangesAsync();
+                            
+                            foreach (var item in orderModel.Items)
+                            {
+                                var producto = await _context.Products.FindAsync(item.ProductoId);
+                                if (producto != null)
+                                {
+                                    producto.Stock -= item.Cantidad;
+                                    _context.Update(producto);
+                                }
+                            }
+                            
+                            await _context.SaveChangesAsync();
+                            transaction.Commit();
+                            
+                            TempData["SuccessMessage"] = "Su pedido ha sido creado correctamente";
+                            return RedirectToAction(nameof(Details), new { id = orderModel.Id });
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            throw new Exception("Error al guardar el pedido en la base de datos", ex);
                         }
                     }
-                    
-                    await _context.SaveChangesAsync();
-                    
-                    TempData["SuccessMessage"] = "Su pedido ha sido creado correctamente";
-                    return RedirectToAction(nameof(Details), new { id = orderModel.Id });
                 }
             }
             catch (Exception ex)
