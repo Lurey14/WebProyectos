@@ -41,10 +41,8 @@ namespace AplicacionPedidos.Models
         [StringLength(500)]
         public string Notas { get; set; }
         
-        // Relación con OrderItemModel
         public List<OrderItemModel> Items { get; set; } = new List<OrderItemModel>();
         
-        // Estados posibles para un pedido
         [NotMapped]
         public static List<string> EstadosDisponibles => new List<string>
         {
@@ -55,7 +53,6 @@ namespace AplicacionPedidos.Models
             "Cancelado"
         };
         
-        // Método para calcular el total del pedido
         public void CalcularTotal()
         {
             Total = 0;
@@ -69,7 +66,6 @@ namespace AplicacionPedidos.Models
             }
         }
         
-        // Método para verificar si hay suficiente stock para todos los items
         public bool VerificarStock(Dictionary<int, int> stockDisponible)
         {
             if (Items == null) return true;
@@ -84,7 +80,6 @@ namespace AplicacionPedidos.Models
             return true;
         }
         
-        // Método para obtener el color de badge según el estado
         [NotMapped]
         public string ColorEstado
         {
@@ -92,12 +87,12 @@ namespace AplicacionPedidos.Models
             {
                 return Estado switch
                 {
-                    "Pendiente" => "#AAA2B1",   // Gris-lavanda
-                    "Procesando" => "#4D6489",  // Azul medio
-                    "Enviado" => "#78809D",     // Azul grisáceo
-                    "Entregado" => "#1C3150",   // Azul oscuro
-                    "Cancelado" => "#DBC6C0",   // Beige
-                    _ => "#AAA2B1",             // Color por defecto
+                    "Pendiente" => "#AAA2B1",
+                    "Procesando" => "#4D6489",
+                    "Enviado" => "#78809D",
+                    "Entregado" => "#1C3150",
+                    "Cancelado" => "#DBC6C0",
+                    _ => "#AAA2B1",
                 };
             }
         }

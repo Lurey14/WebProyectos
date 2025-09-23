@@ -34,7 +34,6 @@
     }
 
     <div class="row">
-        <!-- Información del pedido -->
         <div class="col-lg-4 mb-4">
             <div class="card border-0 shadow h-100" style="border-radius: 10px;">
                 <div class="card-header py-3" style="background-color: #4D6489; color: white;">
@@ -47,12 +46,12 @@
                             <div class="d-flex align-items-center">
                                 <span class="badge py-2 px-3 fs-6" style="background-color: @(Model.Estado switch
                                 {
-                                    "Pendiente" => "#AAA2B1",   // Gris-lavanda
-                                    "Procesando" => "#4D6489",  // Azul medio
-                                    "Enviado" => "#78809D",     // Azul grisáceo
-                                    "Entregado" => "#1C3150",   // Azul oscuro
-                                    "Cancelado" => "#DBC6C0",   // Beige
-                                    _ => "#AAA2B1",             // Color por defecto
+                                    "Pendiente" => "#AAA2B1",
+                                    "Procesando" => "#4D6489",
+                                    "Enviado" => "#78809D",
+                                    "Entregado" => "#1C3150",
+                                    "Cancelado" => "#DBC6C0",
+                                    _ => "#AAA2B1",
                                 });">
                                     @Model.Estado
                                 </span>
@@ -95,7 +94,6 @@
             </div>
         </div>
         
-        <!-- Información del cliente -->
         <div class="col-lg-4 mb-4">
             <div class="card border-0 shadow h-100" style="border-radius: 10px;">
                 <div class="card-header py-3" style="background-color: #4D6489; color: white;">
@@ -130,7 +128,6 @@
             </div>
         </div>
         
-        <!-- Historial de estados -->
         <div class="col-lg-4 mb-4">
             <div class="card border-0 shadow h-100" style="border-radius: 10px;">
                 <div class="card-header py-3" style="background-color: #4D6489; color: white;">
@@ -180,78 +177,155 @@
             </div>
         </div>
     </div>
-    
-    <!-- Productos del pedido -->
-    <div class="card border-0 shadow" style="border-radius: 10px;">
-        <div class="card-header py-3" style="background-color: #4D6489; color: white;">
+
+    <div class="card border-0 shadow mb-4" style="border-radius: 10px;">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center" style="background-color: #4D6489; color: white;">
             <h5 class="mb-0 fw-bold"><i class="bi bi-box-seam me-2"></i>Productos del Pedido</h5>
+            <span class="badge bg-white text-dark">@Model.Items?.Count() productos</span>
         </div>
         <div class="card-body p-0">
-            <div class="table-responsive">
-                <table class="table mb-0">
-                    <thead>
-                        <tr class="table-secondary">
-                            <th class="ps-4">Producto</th>
-                            <th class="text-center">Precio Unitario</th>
-                            <th class="text-center">Cantidad</th>
-                            <th class="text-end pe-4">Subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @if (Model.Items != null && Model.Items.Any())
+            @if (Model.Items != null && Model.Items.Any())
+            {
+                <div class="list-group list-group-flush product-list">
+                    @foreach (var item in Model.Items)
                     {
-                        @foreach (var item in Model.Items)
-                        {
-                            <tr>
-                                <td class="ps-4">
-                                    <div class="d-flex align-items-center">
-                                        <div class="product-img-container me-3" style="width: 50px; height: 50px; overflow: hidden; border-radius: 8px;">
-                                            <img src="@(string.IsNullOrEmpty(item.Producto?.ImagenUrl) ? "/images/products/no-image.jpg" : item.Producto?.ImagenUrl)" 
-                                                 alt="@item.Producto?.Nombre" style="width: 100%; height: 100%; object-fit: cover;">
-                                        </div>
-                                        <div>
-                                            <div class="fw-medium">@item.Producto?.Nombre</div>
-                                            <small class="text-muted">@(item.Producto?.Categoria ?? "Sin categoría")</small>
+                        <div class="list-group-item product-item p-3">
+                            <div class="row align-items-center">
+                                <div class="col-md-2 col-sm-3 mb-3 mb-md-0 text-center">
+                                    <div class="product-img-container mx-auto" style="width: 100px; height: 100px; overflow: hidden; border-radius: 8px;">
+                                        <img src="@(string.IsNullOrEmpty(item.Producto?.ImagenUrl) ? "/images/products/no-image.jpg" : item.Producto?.ImagenUrl)" 
+                                             alt="@item.Producto?.Nombre" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-9 mb-3 mb-md-0">
+                                    <h5 class="fw-bold mb-1">@item.Producto?.Nombre</h5>
+                                    <div class="mb-2">
+                                        <span class="badge" style="background-color: #78809D;">@(item.Producto?.Categoria ?? "Sin categoría")</span>
+                                    </div>
+                                    <p class="mb-0 text-muted product-description">
+                                        @(string.IsNullOrEmpty(item.Producto?.Descripcion) ? "Sin descripción disponible" : 
+                                            (item.Producto.Descripcion.Length > 100 ? item.Producto.Descripcion.Substring(0, 100) + "..." : item.Producto.Descripcion))
+                                    </p>
+                                </div>
+                                <div class="col-md-2 col-4 mb-2 mb-md-0 text-center">
+                                    <div class="text-muted small">Precio unitario</div>
+                                    <div class="fw-bold">@(item.PrecioUnitario > 0 ? item.PrecioUnitario.ToString("C") : item.Producto?.Precio.ToString("C"))</div>
+                                </div>
+                                <div class="col-md-2 col-4 mb-2 mb-md-0 text-center">
+                                    <div class="text-muted small">Cantidad</div>
+                                    <div class="quantity-badge">@item.Cantidad</div>
+                                </div>
+                                <div class="col-md-2 col-4 mb-2 mb-md-0 text-center">
+                                    <div class="text-muted small">Subtotal</div>
+                                    <div class="fw-bold" style="color: #1C3150;">@item.Subtotal.ToString("C")</div>
+                                </div>
+                            </div>
+                            @if (!string.IsNullOrEmpty(item.Producto?.Descripcion) && item.Producto.Descripcion.Length > 100)
+                            {
+                                <div class="mt-2">
+                                    <button class="btn btn-sm btn-link p-0 toggle-description" data-bs-toggle="collapse" 
+                                            data-bs-target="#description-@item.Id" aria-expanded="false">
+                                        Ver descripción completa
+                                    </button>
+                                    <div class="collapse mt-2" id="description-@item.Id">
+                                        <div class="card card-body bg-light p-2">
+                                            @item.Producto.Descripcion
                                         </div>
                                     </div>
-                                </td>
-                                <td class="text-center">@(item.PrecioUnitario > 0 ? item.PrecioUnitario.ToString("C") : item.Producto?.Precio.ToString("C"))</td>
-                                <td class="text-center">@item.Cantidad</td>
-                                <td class="text-end pe-4 fw-medium">@item.Subtotal.ToString("C")</td>
-                            </tr>
-                        }
-                        <tr class="table-light">
-                            <td colspan="3" class="text-end fw-bold">Total:</td>
-                            <td class="text-end pe-4 fw-bold fs-5" style="color: #1C3150;">@Model.Total.ToString("C")</td>
-                        </tr>
-                    }
-                    else
-                    {
-                        <tr>
-                            <td colspan="4" class="text-center py-4">
-                                <div class="py-4">
-                                    <i class="bi bi-box2 text-muted" style="font-size: 2rem;"></i>
-                                    <p class="mt-2 mb-0">No hay productos en este pedido</p>
                                 </div>
-                            </td>
-                        </tr>
+                            }
+                        </div>
                     }
-                    </tbody>
-                </table>
+                    <div class="list-group-item py-3 bg-light">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-6">
+                                <table class="table table-sm mb-0">
+                                    <tr>
+                                        <td class="text-end border-0">Subtotal:</td>
+                                        <td class="text-end fw-medium border-0" style="width: 150px;">@Model.Total.ToString("C")</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end border-0"><strong>Total del Pedido:</strong></td>
+                                        <td class="text-end fw-bold fs-5 border-0" style="color: #1C3150;">@Model.Total.ToString("C")</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <i class="bi bi-box2 text-muted" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3 mb-1">No hay productos en este pedido</h5>
+                    <p class="text-muted">Este pedido no contiene ningún producto</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div class="card border-0 shadow h-100" style="border-radius: 10px;">
+                <div class="card-header py-3" style="background-color: #4D6489; color: white;">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-truck me-2"></i>Información de Entrega</h5>
+                </div>
+                <div class="card-body">
+                    <h6 class="fw-bold mb-3">Dirección de Entrega</h6>
+                    <p>@Model.DireccionEntrega</p>
+                    
+                    <h6 class="fw-bold mb-3">Instrucciones Especiales</h6>
+                    <p>@(String.IsNullOrEmpty(Model.Notas) ? "No se proporcionaron instrucciones especiales" : Model.Notas)</p>
+                    
+                    <h6 class="fw-bold mb-3">Tiempo Estimado de Entrega</h6>
+                    @{
+                        var estimatedDelivery = Model.Estado switch
+                        {
+                            "Pendiente" => "3-5 días hábiles",
+                            "Procesando" => "2-4 días hábiles",
+                            "Enviado" => "1-2 días hábiles",
+                            "Entregado" => "Entregado",
+                            "Cancelado" => "Cancelado",
+                            _ => "No disponible"
+                        };
+                    }
+                    <p>@estimatedDelivery</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card border-0 shadow h-100" style="border-radius: 10px;">
+                <div class="card-header py-3" style="background-color: #4D6489; color: white;">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-map me-2"></i>Ubicación de Entrega</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="ratio ratio-16x9 bg-light">
+                        <div class="d-flex align-items-center justify-content-center flex-column p-3">
+                            <i class="bi bi-map text-muted mb-2" style="font-size: 2.5rem;"></i>
+                            <h6 class="mb-1">Mapa no disponible</h6>
+                            <p class="text-muted small mb-0">La ubicación exacta no está disponible</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="mt-4 text-center">
-        <a asp-action="Index" class="btn btn-outline-secondary me-2">
+    <div class="mt-4 d-flex justify-content-between">
+        <a asp-action="Index" class="btn btn-outline-secondary">
             <i class="bi bi-arrow-left me-2"></i>Volver a la Lista
         </a>
-        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn me-2" style="background-color: #4D6489; color: white;">
-            <i class="bi bi-pencil me-2"></i>Editar Pedido
-        </a>
-        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger">
-            <i class="bi bi-trash me-2"></i>Eliminar Pedido
-        </a>
+        
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn me-2" style="background-color: #4D6489; color: white;">
+                <i class="bi bi-pencil me-2"></i>Editar Pedido
+            </a>
+            <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger">
+                <i class="bi bi-trash me-2"></i>Eliminar Pedido
+            </a>
+        </div>
     </div>
 </div>
 
@@ -265,7 +339,6 @@
         font-weight: bold;
     }
     
-    /* Estilos para la línea de tiempo */
     .timeline {
         position: relative;
         padding-left: 30px;
@@ -305,15 +378,41 @@
     .timeline-item.active .timeline-indicator {
         background-color: #4D6489;
     }
+    
+    .product-item {
+        transition: all 0.2s ease;
+    }
+    
+    .product-item:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .quantity-badge {
+        display: inline-block;
+        background-color: #4D6489;
+        color: white;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 20px;
+        min-width: 30px;
+    }
+    
+    .product-description {
+        font-size: 0.9rem;
+    }
 </style>
 
 @section Scripts {
     <script>
         $(document).ready(function(){
-            // Eliminar alertas después de 5 segundos
             setTimeout(function(){
                 $('.alert').alert('close');
             }, 5000);
+            
+            $('.toggle-description').click(function() {
+                const isExpanded = $(this).attr('aria-expanded') === 'true';
+                $(this).text(isExpanded ? 'Ver descripción completa' : 'Ocultar descripción');
+            });
         });
     </script>
 }

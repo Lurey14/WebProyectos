@@ -1,0 +1,319 @@
+﻿@model AplicacionPedidos.Models.OrderModel
+
+@{
+    ViewData["Title"] = "Detalles del Pedido";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold" style="color: #1C3150;">Detalles del Pedido #@Model.Id</h1>
+        <div>
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left me-2"></i>Volver a la Lista
+            </a>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn ms-2" style="background-color: #4D6489; color: white;">
+                <i class="bi bi-pencil me-2"></i>Editar Pedido
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle me-2"></i> @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle me-2"></i> @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row">
+        <!-- Información del pedido -->
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow h-100" style="border-radius: 10px;">
+                <div class="card-header py-3" style="background-color: #4D6489; color: white;">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-info-circle me-2"></i>Información del Pedido</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <div class="mb-3">
+                            <span class="d-block text-muted small">Estado actual</span>
+                            <div class="d-flex align-items-center">
+                                <span class="badge py-2 px-3 fs-6" style="background-color: @(Model.Estado switch
+                                {
+                                    "Pendiente" => "#AAA2B1",   // Gris-lavanda
+                                    "Procesando" => "#4D6489",  // Azul medio
+                                    "Enviado" => "#78809D",     // Azul grisáceo
+                                    "Entregado" => "#1C3150",   // Azul oscuro
+                                    "Cancelado" => "#DBC6C0",   // Beige
+                                    _ => "#AAA2B1",             // Color por defecto
+                                });">
+                                    @Model.Estado
+                                </span>
+                            </div>
+                        </div>
+
+                        @if (User.IsInRole("Admin") || User.IsInRole("Empleado"))
+                        {
+                            <div class="mb-4">
+                                <span class="d-block text-muted small">Cambiar estado</span>
+                                <div class="btn-group w-100" role="group">
+                                    @foreach (var estado in (List<string>)ViewBag.Estados)
+                                    {
+                                        if (estado != Model.Estado)
+                                        {
+                                            <form asp-action="CambiarEstado" asp-route-id="@Model.Id" method="post" style="display: inline;">
+                                                <input type="hidden" name="nuevoEstado" value="@estado" />
+                                                <button type="submit" class="btn btn-sm btn-outline-secondary me-1 mb-1">
+                                                    <i class="bi bi-arrow-right-circle me-1"></i>@estado
+                                                </button>
+                                            </form>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                        <dl class="row mb-0">
+                            <dt class="col-sm-5 text-muted">ID del Pedido</dt>
+                            <dd class="col-sm-7 fw-bold">#@Model.Id</dd>
+                            
+                            <dt class="col-sm-5 text-muted">Fecha</dt>
+                            <dd class="col-sm-7">@Model.Fecha.ToString("dd/MM/yyyy HH:mm")</dd>
+                            
+                            <dt class="col-sm-5 text-muted">Total</dt>
+                            <dd class="col-sm-7 fw-bold fs-4" style="color: #1C3150;">@Model.Total.ToString("C")</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Información del cliente -->
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow h-100" style="border-radius: 10px;">
+                <div class="card-header py-3" style="background-color: #4D6489; color: white;">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-person me-2"></i>Información del Cliente</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="avatar-circle me-3" style="background-color: #4D6489; width: 50px; height: 50px; font-size: 1.5rem;">
+                            @(Model.Cliente?.Nombre?.Substring(0, 1).ToUpper() ?? "U")
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">@Model.Cliente?.Nombre</h5>
+                            <div class="text-muted">@Model.Cliente?.Email</div>
+                        </div>
+                    </div>
+                    
+                    <dl class="row mb-0">
+                        <dt class="col-sm-4 text-muted">Rol</dt>
+                        <dd class="col-sm-8">
+                            <span class="badge bg-secondary">@Model.Cliente?.Rol</span>
+                        </dd>
+                        
+                        <dt class="col-sm-4 text-muted">Dirección</dt>
+                        <dd class="col-sm-8">@Model.DireccionEntrega</dd>
+                        
+                        <dt class="col-sm-4 text-muted">Notas</dt>
+                        <dd class="col-sm-8">
+                            <p class="mb-0">@(String.IsNullOrEmpty(Model.Notas) ? "Sin notas" : Model.Notas)</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Historial de estados -->
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow h-100" style="border-radius: 10px;">
+                <div class="card-header py-3" style="background-color: #4D6489; color: white;">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-clock-history me-2"></i>Historial</h5>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item @(Model.Estado == "Pendiente" || Model.Estado == "Procesando" || Model.Estado == "Enviado" || Model.Estado == "Entregado" ? "active" : "")">
+                            <div class="timeline-indicator"></div>
+                            <p class="mb-1 fw-medium">Pedido recibido</p>
+                            <p class="text-muted small">@Model.Fecha.ToString("dd/MM/yyyy HH:mm")</p>
+                        </div>
+                        <div class="timeline-item @(Model.Estado == "Procesando" || Model.Estado == "Enviado" || Model.Estado == "Entregado" ? "active" : "")">
+                            <div class="timeline-indicator"></div>
+                            <p class="mb-1 fw-medium">En procesamiento</p>
+                            <p class="text-muted small">
+                                @(Model.Estado == "Procesando" || Model.Estado == "Enviado" || Model.Estado == "Entregado" ? 
+                                    Model.Fecha.AddDays(1).ToString("dd/MM/yyyy") : "Pendiente")
+                            </p>
+                        </div>
+                        <div class="timeline-item @(Model.Estado == "Enviado" || Model.Estado == "Entregado" ? "active" : "")">
+                            <div class="timeline-indicator"></div>
+                            <p class="mb-1 fw-medium">Enviado</p>
+                            <p class="text-muted small">
+                                @(Model.Estado == "Enviado" || Model.Estado == "Entregado" ? 
+                                    Model.Fecha.AddDays(2).ToString("dd/MM/yyyy") : "Pendiente")
+                            </p>
+                        </div>
+                        <div class="timeline-item @(Model.Estado == "Entregado" ? "active" : "")">
+                            <div class="timeline-indicator"></div>
+                            <p class="mb-1 fw-medium">Entregado</p>
+                            <p class="text-muted small">
+                                @(Model.Estado == "Entregado" ? 
+                                    Model.Fecha.AddDays(3).ToString("dd/MM/yyyy") : "Pendiente")
+                            </p>
+                        </div>
+                        @if (Model.Estado == "Cancelado")
+                        {
+                            <div class="timeline-item active">
+                                <div class="timeline-indicator" style="background-color: #dc3545;"></div>
+                                <p class="mb-1 fw-medium text-danger">Cancelado</p>
+                                <p class="text-muted small">@Model.Fecha.AddDays(1).ToString("dd/MM/yyyy")</p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Productos del pedido -->
+    <div class="card border-0 shadow" style="border-radius: 10px;">
+        <div class="card-header py-3" style="background-color: #4D6489; color: white;">
+            <h5 class="mb-0 fw-bold"><i class="bi bi-box-seam me-2"></i>Productos del Pedido</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table mb-0">
+                    <thead>
+                        <tr class="table-secondary">
+                            <th class="ps-4">Producto</th>
+                            <th class="text-center">Precio Unitario</th>
+                            <th class="text-center">Cantidad</th>
+                            <th class="text-end pe-4">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @if (Model.Items != null && Model.Items.Any())
+                    {
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr>
+                                <td class="ps-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="product-img-container me-3" style="width: 50px; height: 50px; overflow: hidden; border-radius: 8px;">
+                                            <img src="@(string.IsNullOrEmpty(item.Producto?.ImagenUrl) ? "/images/products/no-image.jpg" : item.Producto?.ImagenUrl)" 
+                                                 alt="@item.Producto?.Nombre" style="width: 100%; height: 100%; object-fit: cover;">
+                                        </div>
+                                        <div>
+                                            <div class="fw-medium">@item.Producto?.Nombre</div>
+                                            <small class="text-muted">@(item.Producto?.Categoria ?? "Sin categoría")</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">@(item.PrecioUnitario > 0 ? item.PrecioUnitario.ToString("C") : item.Producto?.Precio.ToString("C"))</td>
+                                <td class="text-center">@item.Cantidad</td>
+                                <td class="text-end pe-4 fw-medium">@item.Subtotal.ToString("C")</td>
+                            </tr>
+                        }
+                        <tr class="table-light">
+                            <td colspan="3" class="text-end fw-bold">Total:</td>
+                            <td class="text-end pe-4 fw-bold fs-5" style="color: #1C3150;">@Model.Total.ToString("C")</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center py-4">
+                                <div class="py-4">
+                                    <i class="bi bi-box2 text-muted" style="font-size: 2rem;"></i>
+                                    <p class="mt-2 mb-0">No hay productos en este pedido</p>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 text-center">
+        <a asp-action="Index" class="btn btn-outline-secondary me-2">
+            <i class="bi bi-arrow-left me-2"></i>Volver a la Lista
+        </a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn me-2" style="background-color: #4D6489; color: white;">
+            <i class="bi bi-pencil me-2"></i>Editar Pedido
+        </a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger">
+            <i class="bi bi-trash me-2"></i>Eliminar Pedido
+        </a>
+    </div>
+</div>
+
+<style>
+    .avatar-circle {
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+    
+    /* Estilos para la línea de tiempo */
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+    }
+    
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 5px;
+        height: calc(100% - 10px);
+        width: 2px;
+        background-color: #e9ecef;
+    }
+    
+    .timeline-item {
+        position: relative;
+        padding-bottom: 25px;
+        color: #6c757d;
+    }
+    
+    .timeline-item.active {
+        color: #212529;
+    }
+    
+    .timeline-indicator {
+        position: absolute;
+        left: -30px;
+        top: 4px;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: #e9ecef;
+        border: 2px solid white;
+    }
+    
+    .timeline-item.active .timeline-indicator {
+        background-color: #4D6489;
+    }
+</style>
+
+@section Scripts {
+    <script>
+        $(document).ready(function(){
+            // Eliminar alertas después de 5 segundos
+            setTimeout(function(){
+                $('.alert').alert('close');
+            }, 5000);
+        });
+    </script>
+}

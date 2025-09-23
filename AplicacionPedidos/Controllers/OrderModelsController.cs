@@ -370,7 +370,6 @@ namespace AplicacionPedidos.Controllers
             {
                 try
                 {
-                    // Si el pedido no está entregado, restaurar el stock
                     if (orderModel.Estado != "Entregado")
                     {
                         foreach (var item in orderModel.Items)
@@ -383,11 +382,9 @@ namespace AplicacionPedidos.Controllers
                             }
                         }
                     }
-                    
-                    // Eliminar los items del pedido
+
                     _context.OrderItems.RemoveRange(orderModel.Items);
                     
-                    // Eliminar el pedido
                     _context.Orders.Remove(orderModel);
                     await _context.SaveChangesAsync();
                     
@@ -451,7 +448,6 @@ namespace AplicacionPedidos.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    // Verificar que hay productos seleccionados
                     if (productoIds == null || productoIds.Length == 0 || cantidades == null || cantidades.Length == 0)
                     {
                         ModelState.AddModelError("", "Debe seleccionar al menos un producto para el pedido");
@@ -459,7 +455,6 @@ namespace AplicacionPedidos.Controllers
                         return View(orderModel);
                     }
 
-                    // El resto del código es similar al Create normal
                     Dictionary<int, int> stockDisponible = new Dictionary<int, int>();
                     Dictionary<int, ProductModel> productosInfo = new Dictionary<int, ProductModel>();
                     
@@ -475,7 +470,6 @@ namespace AplicacionPedidos.Controllers
                         }
                     }
 
-                    // Crear los items del pedido
                     orderModel.Items = new List<OrderItemModel>();
                     for (int i = 0; i < productoIds.Length; i++)
                     {

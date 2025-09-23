@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\controllers\\ordermodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:controllers\\ordermodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\ordermodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\ordermodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\controllers\\productmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:controllers\\productmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\productmodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\productmodels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\ordermodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\ordermodels\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\ordermodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\ordermodels\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\ordermodels\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:views\\ordermodels\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\1.aplicacionpedido\\webproyectos\\aplicacionpedidos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -47,95 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderModelsController.cs",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Controllers\\OrderModelsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderModelsController.cs",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Controllers\\OrderModelsController.cs",
-              "RelativeToolTip": "Controllers\\OrderModelsController.cs",
-              "ViewState": "AgIAADwBAAAAAAAAAAAwwJsAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T19:55:37.044Z",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\OrderModels\\Details.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Details.cshtml",
+              "RelativeToolTip": "Views\\OrderModels\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T21:05:49.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\OrderModels\\Create.cshtml",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Create.cshtml",
-              "RelativeToolTip": "Views\\OrderModels\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T00:58:13.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\OrderModels\\Edit.cshtml",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Edit.cshtml",
-              "RelativeToolTip": "Views\\OrderModels\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T00:16:57.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\OrderModels\\Delete.cshtml",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\OrderModels\\Delete.cshtml",
-              "RelativeToolTip": "Views\\OrderModels\\Delete.cshtml",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T00:17:33.473Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductModelsController.cs",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Controllers\\ProductModelsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductModelsController.cs",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Controllers\\ProductModelsController.cs",
-              "RelativeToolTip": "Controllers\\ProductModelsController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAQwMcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T20:20:30.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\ProductModels\\Index.cshtml",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\ProductModels\\Index.cshtml",
-              "RelativeToolTip": "Views\\ProductModels\\Index.cshtml",
-              "ViewState": "AgIAANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-18T20:23:53.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderModel.cs",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Models\\OrderModel.cs",
-              "RelativeDocumentMoniker": "Models\\OrderModel.cs",
-              "ToolTip": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Models\\OrderModel.cs",
-              "RelativeToolTip": "Models\\OrderModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T00:14:38.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
