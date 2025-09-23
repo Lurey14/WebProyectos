@@ -12,7 +12,6 @@
         </a>
     </div>
 
-    <!-- Mostrar errores generales -->
     @if (!ViewData.ModelState.IsValid)
     {
         <div class="alert alert-danger mb-4">
@@ -21,11 +20,8 @@
         </div>
     }
 
-    <form asp-action="Create" id="orderForm" method="post">
-        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
-        
+    <form method="post">
         <div class="row">
-            <!-- Información del pedido -->
             <div class="col-lg-4 mb-4">
                 <div class="card border-0 shadow h-100" style="border-radius: 10px;">
                     <div class="card-header py-3" style="background-color: #4D6489; color: white;">
@@ -33,30 +29,35 @@
                     </div>
                     <div class="card-body">
                         <div class="mb-3">
-                            <label asp-for="UserId" class="form-label fw-medium">Cliente</label>
-                            <select asp-for="UserId" asp-items="ViewBag.ClienteId" class="form-select" required>
+                            <label for="UserId" class="form-label fw-medium">Cliente</label>
+                            <select id="UserId" name="UserId" class="form-select" required>
                                 <option value="">-- Seleccionar Cliente --</option>
+                                @foreach (var cliente in (SelectList)ViewBag.ClienteId)
+                                {
+                                    <option value="@cliente.Value">@cliente.Text</option>
+                                }
                             </select>
-                            <span asp-validation-for="UserId" class="text-danger"></span>
+                            <span class="text-danger field-validation-valid" data-valmsg-for="UserId" data-valmsg-replace="true"></span>
                         </div>
                         
                         <div class="mb-3">
-                            <label asp-for="DireccionEntrega" class="form-label fw-medium">Dirección de Entrega</label>
-                            <textarea asp-for="DireccionEntrega" class="form-control" rows="3" required placeholder="Ingrese la dirección de entrega"></textarea>
-                            <span asp-validation-for="DireccionEntrega" class="text-danger"></span>
+                            <label for="DireccionEntrega" class="form-label fw-medium">Dirección de Entrega</label>
+                            <textarea id="DireccionEntrega" name="DireccionEntrega" class="form-control" rows="3" required placeholder="Ingrese la dirección de entrega"></textarea>
+                            <span class="text-danger field-validation-valid" data-valmsg-for="DireccionEntrega" data-valmsg-replace="true"></span>
                         </div>
                         
                         <div class="mb-3">
-                            <label asp-for="Notas" class="form-label fw-medium">Notas Adicionales</label>
-                            <textarea asp-for="Notas" class="form-control" rows="2" placeholder="Notas opcionales"></textarea>
-                            <span asp-validation-for="Notas" class="text-danger"></span>
+                            <label for="Notas" class="form-label fw-medium">Notas Adicionales</label>
+                            <textarea id="Notas" name="Notas" class="form-control" rows="2" placeholder="Notas opcionales"></textarea>
                         </div>
                         
                         <div class="mb-3">
-                            <label class="form-label fw-medium">Estado</label>
+                            <label for="Estado" class="form-label fw-medium">Estado</label>
                             <input type="text" class="form-control" value="Pendiente" readonly />
                             <small class="text-muted">Los pedidos nuevos comienzan en estado pendiente</small>
                         </div>
+                        <input type="hidden" id="Estado" name="Estado" value="Pendiente" />
+                        <input type="hidden" id="Fecha" name="Fecha" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")" />
                     </div>
                 </div>
             </div>
@@ -139,12 +140,6 @@
             </button>
         </div>
     </form>
-    
-    <!-- Mensaje de depuración (solo para desarrollo) -->
-    <div id="debug-info" class="mt-4 p-3 border rounded bg-light d-none">
-        <h6 class="fw-bold">Información de depuración:</h6>
-        <div id="debug-content"></div>
-    </div>
 </div>
 
 @section Scripts {
@@ -152,20 +147,18 @@
     
     <script>
         $(document).ready(function() {
-            // Función para debug
-            function logDebug(message) {
-                console.log(message);
-                $("#debug-info").removeClass("d-none");
-                $("#debug-content").append("<p>" + message + "</p>");
-            }
-        
+            console.log("Formulario de pedido iniciado");
+            
+            console.log("UserId:", $("#UserId").val());
+            console.log("DireccionEntrega:", $("#DireccionEntrega").val());
+            console.log("Estado:", $("#Estado").val());
+            
             const formatter = new Intl.NumberFormat('es-BO', {
                 style: 'currency',
                 currency: 'BOB',
                 minimumFractionDigits: 2
             });
             
-            // Función para calcular subtotal de una fila
             function calcularSubtotal(row) {
                 const precio = parseFloat(row.find('.producto-select option:selected').data('precio')) || 0;
                 const cantidad = parseInt(row.find('.producto-cantidad').val()) || 0;
@@ -177,7 +170,6 @@
                 return subtotal;
             }
             
-            // Función para calcular el total del pedido
             function calcularTotal() {
                 let total = 0;
                 $('.product-row').each(function() {
@@ -187,7 +179,6 @@
                 $('#orderTotal').text(formatter.format(total));
             }
             
-            // Evento al cambiar producto
             $(document).on('change', '.producto-select', function() {
                 const row = $(this).closest('.product-row');
                 const option = $(this).find('option:selected');
@@ -202,13 +193,11 @@
                 calcularTotal();
             });
             
-            // Evento al cambiar cantidad
             $(document).on('change', '.producto-cantidad', function() {
                 const row = $(this).closest('.product-row');
                 const stock = parseInt(row.find('.producto-select option:selected').data('stock')) || 0;
                 let cantidad = parseInt($(this).val()) || 0;
                 
-                // Validar que la cantidad no sea mayor al stock
                 if (cantidad > stock) {
                     cantidad = stock;
                     $(this).val(stock);
@@ -224,7 +213,6 @@
                 calcularTotal();
             });
             
-            // Agregar fila de producto
             $('#addProductRow').click(function() {
                 const newRow = $('.product-row:first').clone();
                 newRow.find('.producto-select').val('');
@@ -234,7 +222,6 @@
                 $('#productTable tbody').append(newRow);
             });
             
-            // Eliminar fila de producto
             $(document).on('click', '.remove-row', function() {
                 if ($('.product-row').length > 1) {
                     $(this).closest('.product-row').remove();
@@ -244,68 +231,38 @@
                 }
             });
             
-            // Validación del formulario
-            $('#orderForm').submit(function(e) {
-                try {
-                    let valid = true;
-                    let productoSeleccionado = false;
-                    
-                    // Verificar que haya al menos un producto seleccionado
-                    $('.product-row').each(function() {
-                        const producto = $(this).find('.producto-select').val();
-                        const cantidad = $(this).find('.producto-cantidad').val();
-                        
-                        if (producto && cantidad && cantidad > 0) {
-                            productoSeleccionado = true;
-                            logDebug("Producto seleccionado: ID " + producto + ", Cantidad: " + cantidad);
-                        }
-                    });
-                    
-                    // Verificar que se haya seleccionado un cliente
-                    if (!$('#UserId').val()) {
-                        alert('Debe seleccionar un cliente');
-                        e.preventDefault();
-                        valid = false;
-                        logDebug("Error: No se seleccionó cliente");
-                        return false;
-                    }
-                    
-                    // Verificar que se haya ingresado una dirección de entrega
-                    if (!$('#DireccionEntrega').val().trim()) {
-                        alert('Debe ingresar una dirección de entrega');
-                        e.preventDefault();
-                        valid = false;
-                        logDebug("Error: No se ingresó dirección");
-                        return false;
-                    }
-                    
-                    if (!productoSeleccionado) {
-                        alert('Debe seleccionar al menos un producto para el pedido');
-                        e.preventDefault();
-                        valid = false;
-                        logDebug("Error: No se seleccionaron productos");
-                        return false;
-                    }
-                    
-                    if (valid) {
-                        logDebug("Formulario válido, enviando...");
-                        // Deshabilitar el botón para evitar múltiples envíos
-                        $('#submitBtn').prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Procesando...');
-                        return true;
-                    } else {
-                        return false;
-                    }
-                } catch (error) {
-                    logDebug("Error en validación: " + error.message);
+            $('form').submit(function(e) {
+                if (!$("#UserId").val()) {
                     e.preventDefault();
+                    alert("Debe seleccionar un cliente");
                     return false;
                 }
+                
+                if (!$("#DireccionEntrega").val().trim()) {
+                    e.preventDefault();
+                    alert("Debe ingresar una dirección de entrega");
+                    return false;
+                }
+                
+                let hayProductos = false;
+                $('.producto-select').each(function() {
+                    if ($(this).val()) {
+                        hayProductos = true;
+                    }
+                });
+                
+                if (!hayProductos) {
+                    e.preventDefault();
+                    alert("Debe seleccionar al menos un producto");
+                    return false;
+                }
+                
+                $("#submitBtn").prop("disabled", true).html('<i class="spinner-border spinner-border-sm me-2"></i>Procesando...');
+                return true;
             });
             
-            // Inicializar
             calcularTotal();
-            
-            // Establecer valores iniciales para la primera fila
+
             if ($('.producto-select').first().val()) {
                 $('.producto-select').first().trigger('change');
             }

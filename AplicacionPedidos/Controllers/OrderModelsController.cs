@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using AplicacionPedidos.Data;
 using AplicacionPedidos.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Diagnostics;
 
 namespace AplicacionPedidos.Controllers
 {
@@ -30,17 +31,13 @@ namespace AplicacionPedidos.Controllers
                 ViewData["CurrentFechaInicio"] = fechaInicio?.ToString("yyyy-MM-dd");
                 ViewData["CurrentFechaFin"] = fechaFin?.ToString("yyyy-MM-dd");
 
-                // Obtener todos los estados disponibles para el filtro
                 ViewData["Estados"] = OrderModel.EstadosDisponibles;
-
-                // Consulta base
                 var pedidos = _context.Orders
                     .Include(o => o.Cliente)
                     .Include(o => o.Items)
                         .ThenInclude(i => i.Producto)
                     .AsQueryable();
 
-                // Aplicar filtros
                 if (!String.IsNullOrEmpty(searchString))
                 {
                     pedidos = pedidos.Where(o => 
@@ -63,7 +60,6 @@ namespace AplicacionPedidos.Controllers
                     pedidos = pedidos.Where(o => o.Fecha.Date <= fechaFin.Value.Date);
                 }
 
-                // Ordenar por fecha descendente (más recientes primero)
                 pedidos = pedidos.OrderByDescending(o => o.Fecha);
 
                 return View(await pedidos.ToListAsync());
@@ -101,124 +97,166 @@ namespace AplicacionPedidos.Controllers
         // GET: OrderModels/Create
         public IActionResult Create()
         {
-            ViewBag.ClienteId = new SelectList(_context.Users.ToList(), "Id", "Nombre");
+            var clientes = _context.Users.ToList();
+            ViewBag.ClienteId = new SelectList(clientes, "Id", "Nombre");
+            
             ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
-            return View(new OrderModel { Fecha = DateTime.Now, Estado = "Pendiente" });
+            
+            return View(new OrderModel { 
+                Fecha = DateTime.Now, 
+                Estado = "Pendiente" 
+            });
         }
 
         // POST: OrderModels/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(OrderModel orderModel, int[] productoIds, int[] cantidades)
+        public async Task<IActionResult> Create(int UserId, string DireccionEntrega, string Notas, string Estado, DateTime Fecha, int[] productoIds, int[] cantidades)
         {
             try
             {
-                if (ModelState.IsValid)
+                if (UserId <= 0)
                 {
-                    // Verificar que hay productos seleccionados
-                    if (productoIds == null || productoIds.Length == 0 || cantidades == null || cantidades.Length == 0)
-                    {
-                        ModelState.AddModelError("", "Debe seleccionar al menos un producto para el pedido");
-                        ViewBag.ClienteId = new SelectList(_context.Users.ToList(), "Id", "Nombre", orderModel.UserId);
-                        ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
-                        return View(orderModel);
-                    }
+                    ModelState.AddModelError("UserId", "El cliente es obligatorio");
+                    var clientes = _context.Users.ToList();
+                    ViewBag.ClienteId = new SelectList(clientes, "Id", "Nombre", UserId);
+                    ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
+                    return View(new OrderModel { UserId = UserId, DireccionEntrega = DireccionEntrega, Notas = Notas });
+                }
 
-                    // Obtener información de stock actual
-                    Dictionary<int, int> stockDisponible = new Dictionary<int, int>();
-                    Dictionary<int, ProductModel> productosInfo = new Dictionary<int, ProductModel>();
+                if (string.IsNullOrWhiteSpace(DireccionEntrega))
+                {
+                    ModelState.AddModelError("DireccionEntrega", "La dirección de entrega es obligatoria");
+                    var clientes = _context.Users.ToList();
+                    ViewBag.ClienteId = new SelectList(clientes, "Id", "Nombre", UserId);
+                    ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
+                    return View(new OrderModel { UserId = UserId, DireccionEntrega = DireccionEntrega, Notas = Notas });
+                }
+
+                if (productoIds == null || productoIds.Length == 0 || cantidades == null || cantidades.Length == 0)
+                {
+                    ModelState.AddModelError("", "Debe seleccionar al menos un producto para el pedido");
+                    var clientes = _context.Users.ToList();
+                    ViewBag.ClienteId = new SelectList(clientes, "Id", "Nombre", UserId);
+                    ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
+                    return View(new OrderModel { UserId = UserId, DireccionEntrega = DireccionEntrega, Notas = Notas });
+                }
+
+                var orderModel = new OrderModel
+                {
+                    UserId = UserId,
+                    DireccionEntrega = DireccionEntrega,
+                    Notas = Notas ?? string.Empty,
+                    Estado = string.IsNullOrEmpty(Estado) ? "Pendiente" : Estado,
+                    Fecha = Fecha == default(DateTime) ? DateTime.Now : Fecha,
+                    Items = new List<OrderItemModel>()
+                };
+
+                Dictionary<int, ProductModel> productosInfo = new Dictionary<int, ProductModel>();
+                
+                for (int i = 0; i < productoIds.Length; i++)
+                {
+                    int productoId = productoIds[i];
+                    if (productoId <= 0) continue;
                     
-                    for (int i = 0; i < productoIds.Length; i++)
+                    if (!productosInfo.ContainsKey(productoId))
                     {
-                        int productoId = productoIds[i];
-                        if (!stockDisponible.ContainsKey(productoId))
+                        var producto = await _context.Products.FindAsync(productoId);
+                        if (producto != null)
                         {
-                            var producto = await _context.Products.FindAsync(productoId);
-                            if (producto == null)
-                            {
-                                ModelState.AddModelError("", $"Producto con ID {productoId} no encontrado");
-                                continue;
-                            }
-                            stockDisponible[productoId] = producto.Stock;
                             productosInfo[productoId] = producto;
                         }
                     }
-
-                    // Crear los items del pedido
-                    orderModel.Items = new List<OrderItemModel>();
-                    for (int i = 0; i < productoIds.Length; i++)
+                }
+                
+                // Ahora creamos los items del pedido
+                for (int i = 0; i < Math.Min(productoIds.Length, cantidades.Length); i++)
+                {
+                    int productoId = productoIds[i];
+                    int cantidad = cantidades[i];
+                    
+                    if (productoId <= 0 || cantidad <= 0) continue;
+                    
+                    if (!productosInfo.ContainsKey(productoId)) continue;
+                    
+                    var producto = productosInfo[productoId];
+                    
+                    // Verificar stock
+                    if (producto.Stock < cantidad)
                     {
-                        int productoId = productoIds[i];
-                        int cantidad = cantidades[i];
-                        
-                        if (cantidad <= 0) continue;
-                        
-                        if (!stockDisponible.ContainsKey(productoId) || stockDisponible[productoId] < cantidad)
-                        {
-                            ModelState.AddModelError("", $"No hay suficiente stock para el producto {productosInfo[productoId].Nombre}");
-                            continue;
-                        }
-                        
-                        // Reducir el stock disponible para validaciones posteriores
-                        stockDisponible[productoId] -= cantidad;
-                        
-                        var item = new OrderItemModel
-                        {
-                            ProductoId = productoId,
-                            Cantidad = cantidad,
-                            PrecioUnitario = productosInfo[productoId].Precio
-                        };
-                        
-                        item.Subtotal = item.PrecioUnitario * item.Cantidad;
-                        orderModel.Items.Add(item);
+                        ModelState.AddModelError("", $"No hay suficiente stock para el producto {producto.Nombre}. Stock disponible: {producto.Stock}");
+                        continue;
                     }
                     
-                    if (orderModel.Items.Count == 0)
+                    // Crear item
+                    var item = new OrderItemModel
                     {
-                        ModelState.AddModelError("", "No se pudieron agregar productos al pedido debido a problemas de stock");
-                        ViewBag.ClienteId = new SelectList(_context.Users.ToList(), "Id", "Nombre", orderModel.UserId);
-                        ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
-                        return View(orderModel);
-                    }
-
-                    // Calcular total del pedido
-                    orderModel.CalcularTotal();
+                        ProductoId = productoId,
+                        Cantidad = cantidad,
+                        PrecioUnitario = producto.Precio,
+                        Subtotal = producto.Precio * cantidad
+                    };
                     
-                    // Establecer fecha y estado inicial
-                    orderModel.Fecha = DateTime.Now;
-                    orderModel.Estado = "Pendiente";
-                    
-                    // Guardar el pedido
-                    _context.Add(orderModel);
-                    await _context.SaveChangesAsync();
-                    
-                    // Actualizar stock de productos
-                    foreach (var item in orderModel.Items)
+                    orderModel.Items.Add(item);
+                }
+                
+                // Verificar que se agregaron productos
+                if (orderModel.Items.Count == 0)
+                {
+                    ModelState.AddModelError("", "No se pudieron agregar productos al pedido debido a problemas de stock");
+                    var clientes = _context.Users.ToList();
+                    ViewBag.ClienteId = new SelectList(clientes, "Id", "Nombre", UserId);
+                    ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
+                    return View(orderModel);
+                }
+                
+                // Calcular total
+                orderModel.CalcularTotal();
+                
+                // Guardar en la base de datos usando una transacción
+                using (var transaction = _context.Database.BeginTransaction())
+                {
+                    try
                     {
-                        var producto = await _context.Products.FindAsync(item.ProductoId);
-                        if (producto != null)
+                        // Guardar el pedido
+                        _context.Orders.Add(orderModel);
+                        await _context.SaveChangesAsync();
+                        
+                        // Actualizar stock de productos
+                        foreach (var item in orderModel.Items)
                         {
+                            var producto = productosInfo[item.ProductoId];
                             producto.Stock -= item.Cantidad;
                             _context.Update(producto);
                         }
+                        
+                        await _context.SaveChangesAsync();
+                        transaction.Commit();
+                        
+                        TempData["SuccessMessage"] = "Pedido creado correctamente";
+                        return RedirectToAction(nameof(Details), new { id = orderModel.Id });
                     }
-                    
-                    await _context.SaveChangesAsync();
-                    
-                    TempData["SuccessMessage"] = "Pedido creado correctamente";
-                    return RedirectToAction(nameof(Details), new { id = orderModel.Id });
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        ModelState.AddModelError("", $"Error al guardar el pedido: {ex.Message}");
+                        
+                        var clientes = _context.Users.ToList();
+                        ViewBag.ClienteId = new SelectList(clientes, "Id", "Nombre", UserId);
+                        ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
+                        return View(orderModel);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", $"Error al crear el pedido: {ex.Message}");
+                ModelState.AddModelError("", $"Error inesperado: {ex.Message}");
+                
+                var clientes = _context.Users.ToList();
+                ViewBag.ClienteId = new SelectList(clientes, "Id", "Nombre", UserId);
+                ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
+                return View(new OrderModel { UserId = UserId, DireccionEntrega = DireccionEntrega, Notas = Notas });
             }
-            
-            ViewBag.ClienteId = new SelectList(_context.Users.ToList(), "Id", "Nombre", orderModel.UserId);
-            ViewBag.Productos = _context.Products.Where(p => p.Stock > 0).ToList();
-            return View(orderModel);
         }
 
         // GET: OrderModels/Edit/5
@@ -441,6 +479,8 @@ namespace AplicacionPedidos.Controllers
                     orderModel.Items = new List<OrderItemModel>();
                     for (int i = 0; i < productoIds.Length; i++)
                     {
+                        if (i >= cantidades.Length) continue;
+                        
                         int productoId = productoIds[i];
                         int cantidad = cantidades[i];
                         
@@ -474,7 +514,10 @@ namespace AplicacionPedidos.Controllers
 
                     orderModel.CalcularTotal();
                     orderModel.Fecha = DateTime.Now;
-                    orderModel.Estado = "Pendiente";
+                    if (string.IsNullOrEmpty(orderModel.Estado))
+                    {
+                        orderModel.Estado = "Pendiente";
+                    }
                     
                     _context.Add(orderModel);
                     await _context.SaveChangesAsync();
