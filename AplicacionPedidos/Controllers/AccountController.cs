@@ -29,6 +29,7 @@ namespace AplicacionPedidos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
@@ -54,23 +55,40 @@ namespace AplicacionPedidos.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             var model = new RegisterViewModel
             {
-                Roles = new[] { "Cliente", "Empleado" }
+                Role = "Cliente"
             };
             return View(model);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
+            
+            if (string.IsNullOrEmpty(model.Role))
+            {
+                model.Role = "Cliente";
+                ModelState.Clear();
+                TryValidateModel(model);
+            }
+            
             if (ModelState.IsValid)
             {
+                var existingUser = await _userManager.FindByEmailAsync(model.Email);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError(string.Empty, "Este correo electrónico ya está registrado.");
+                    return View(model);
+                }
+                
                 var user = new ApplicationUser 
                 { 
                     UserName = model.Email, 
                     Email = model.Email,
                     Nombre = model.Nombre,
-                    Rol = model.Role
+                    Rol = model.Role,
+                    EmailConfirmed = true
                 };
 
                 var result = await _userManager.CreateAsync(user, model.Password);
@@ -84,16 +102,18 @@ namespace AplicacionPedidos.Controllers
                     await _userManager.AddToRoleAsync(user, model.Role);
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
+          
                     return RedirectToLocal(returnUrl);
                 }
+                
                 AddErrors(result);
             }
-
-            model.Roles = new[] { "Cliente", "Empleado" };
+            
             return View(model);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();

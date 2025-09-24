@@ -40,7 +40,6 @@
         </div>
     }
 
-    <!-- Filtros de búsqueda -->
     <div class="card border-0 shadow mb-4" style="border-radius: 10px; overflow: hidden; background-color: #f8f9fa;">
         <div class="card-header py-3" style="background-color: #4D6489; color: white;">
             <h5 class="mb-0 fw-bold"><i class="bi bi-funnel me-2"></i>Filtros de Búsqueda</h5>
@@ -147,12 +146,12 @@
                             <td class="px-4 py-3">
                                 <span class="badge py-2 px-3" style="background-color: @(item.Estado switch
                                 {
-                                    "Pendiente" => "#AAA2B1",   // Gris-lavanda
-                                    "Procesando" => "#4D6489",  // Azul medio
-                                    "Enviado" => "#78809D",     // Azul grisáceo
-                                    "Entregado" => "#1C3150",   // Azul oscuro
-                                    "Cancelado" => "#DBC6C0",   // Beige
-                                    _ => "#AAA2B1",             // Color por defecto
+                                    "Pendiente" => "#AAA2B1",
+                                    "Procesando" => "#4D6489",
+                                    "Enviado" => "#78809D",
+                                    "Entregado" => "#1C3150",
+                                    "Cancelado" => "#DBC6C0",
+                                    _ => "#AAA2B1",
                                 });">
                                     @item.Estado
                                 </span>
@@ -213,7 +212,6 @@
 @section Scripts {
     <script>
         $(document).ready(function(){
-            // Eliminar alertas después de 5 segundos
             setTimeout(function(){
                 $('.alert').alert('close');
             }, 5000);

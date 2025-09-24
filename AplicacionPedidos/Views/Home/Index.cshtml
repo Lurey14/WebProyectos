@@ -12,11 +12,12 @@
                         <h2 class="mb-3">Bienvenido al Sistema de Pedidos</h2>
                     </div>
                     <div class="p-4">
-                        <p>Podrás realizar:</p>
+                        <p>Iniciar sesion valores predeterminados:</p>
                         <ul class="mb-0">
-                            <li class="mb-2">Administrar catálogo de productos</li>
-                            <li class="mb-2">Procesar pedidos de forma eficiente</li>
-                            <li>Realizar seguimiento a todo el proceso de venta</li>
+                            <li class="mb-2">Para iniciar sesion como admin: correo: admin@gmail.com, contraseña: Admin123!</li>
+                            <li class="mb-2">Para iniciar sesion como empleado: correo: empleado@gmail.com, contraseña: Empleado123!</li>
+                            <li class="mb-2">Para iniciar sesion como cliente: correo: cliente@gmail.com, contraseña: Cliente123!</li>
+                            <li>Realizar seguimiento a todo el proceso</li>
                         </ul>
                     </div>
                 </div>
@@ -34,7 +35,7 @@
                         </div>
                     </div>
                     <h4 class="card-title text-center" style="color: #4F3466;">Productos</h4>
-                    <p class="card-text text-center">Gestiona tu catálogo de productos con precios, stock y descripciones detalladas.</p>
+                    <p class="card-text text-center">Gestionar catalogo de productos con precios, stock y descripciones detalladas.</p>
                     <div class="text-center mt-3">
                         <a asp-controller="ProductModels" asp-action="Index" class="btn" style="background-color: #A580A6; color: white;">
                             Ver productos
@@ -53,7 +54,7 @@
                         </div>
                     </div>
                     <h4 class="card-title text-center" style="color: #4F3466;">Usuarios</h4>
-                    <p class="card-text text-center">Administra usuarios, asigna roles y permisos dentro de la plataforma.</p>
+                    <p class="card-text text-center">Administrar usuarios, asignar roles y permisos dentro de la plataforma.</p>
                     <div class="text-center mt-3">
                         <a asp-controller="UserModels" asp-action="Index" class="btn" style="background-color: #A580A6; color: white;">
                             Ver usuarios
@@ -72,7 +73,7 @@
                         </div>
                     </div>
                     <h4 class="card-title text-center" style="color: #4F3466;">Pedidos</h4>
-                    <p class="card-text text-center">Crea y gestiona pedidos, controla el estado y realiza seguimiento de entregas.</p>
+                    <p class="card-text text-center">Crear y gestionar pedidos, controla el estado y realiza seguimiento de entregas.</p>
                     <div class="text-center mt-3">
                         <a asp-controller="OrderModels" asp-action="Index" class="btn" style="background-color: #A580A6; color: white;">
                             Ver pedidos
@@ -89,14 +90,14 @@
                 <div class="card-body p-4">
                     <div class="row align-items-center">
                         <div class="col-md-8">
-                            <h3 style="color: #4F3466;">¿Quieres crear un nuevo pedido?</h3>
-                            <p class="mb-md-0">Utiliza nuestro sistema de pedidos rápidos para una experiencia simplificada.</p>
+                            <h3 style="color: #4F3466;">Realiza pedidos</h3>
+                            <p class="mb-md-0">Pedidos para realizar</p>
                         </div>
-                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        @* <div class="col-md-4 text-md-end mt-3 mt-md-0">
                             <a asp-controller="OrderModels" asp-action="CreateRapido" class="btn btn-lg" style="background-color: #4F3466; color: white;">
                                 <i class="bi bi-basket2 me-2"></i>Nuevo Pedido
                             </a>
-                        </div>
+                        </div> *@
                     </div>
                 </div>
             </div>

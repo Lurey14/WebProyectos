@@ -119,25 +119,20 @@
 @section Scripts {
     <script>
         $(document).ready(function(){
-            // Función de búsqueda
             $("#searchInput").on("keyup", function() {
                 var value = $(this).val().toLowerCase();
                 $("#usersTable tbody tr").filter(function() {
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
-            
-            // Funcionalidad de paginación (simulada para demostración)
+
             $(".page-link").on("click", function(e) {
                 e.preventDefault();
-                
-                // Quitar la clase active de todos los elementos
+
                 $(".page-item").removeClass("active");
                 
-                // Agregar la clase active al elemento padre del enlace clicado
                 $(this).parent().addClass("active");
-                
-                // Aquí iría la lógica real de paginación
+
             });
         });
     </script>

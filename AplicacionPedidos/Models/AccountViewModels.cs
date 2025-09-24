@@ -19,7 +19,7 @@ namespace AplicacionPedidos.Models
     public class RegisterViewModel
     {
         [Required(ErrorMessage = "El Nombre es obligatorio")]
-        [StringLength(100, ErrorMessage = "El {0} debe tener al menos {2} caracteres y máximo {1}.", MinimumLength = 3)]
+        [StringLength(100, ErrorMessage = "El {0} debe tener al menos {2} caracteres y máximo {1}.", MinimumLength = 2)]
         public string Nombre { get; set; }
 
         [Required(ErrorMessage = "El Email es obligatorio")]
@@ -28,7 +28,7 @@ namespace AplicacionPedidos.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "La Contraseña es obligatoria")]
-        [StringLength(100, ErrorMessage = "La {0} debe tener al menos {2} caracteres y máximo {1}.", MinimumLength = 8)]
+        [StringLength(100, ErrorMessage = "La {0} debe tener al menos {2} caracteres y máximo {1}.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña")]
         public string Password { get; set; }
@@ -40,8 +40,8 @@ namespace AplicacionPedidos.Models
 
         [Required(ErrorMessage = "El Rol es obligatorio")]
         [Display(Name = "Rol")]
-        public string Role { get; set; }
+        public string Role { get; set; } = "Cliente";
 
-        public string[] Roles { get; set; }
+        public string[] Roles { get; set; } = { "Cliente", "Empleado" };
     }
 }

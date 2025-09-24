@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+    ViewData["ShowBanner"] = true;
+}
+
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
+                <div class="card-body p-0">
+                    <div class="p-4" style="background: linear-gradient(to right, #4F3466, #947CAC); color: white;">
+                        <h2 class="mb-3">Bienvenido al Sistema de Pedidos</h2>
+                    </div>
+                    <div class="p-4">
+                        <p>Se realiza:</p>
+                        <ul class="mb-0">
+                            <li class="mb-2">Administrar catalogo de productos</li>
+                            <li class="mb-2">Procesar pedidos de forma eficiente</li>
+                            <li>Realizar seguimiento a todo el proceso de venta</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px;">
+                <div class="card-body p-4">
+                    <div class="text-center mb-3">
+                        <div style="width: 60px; height: 60px; background-color: #4F3466; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="bi bi-box-seam text-white" style="font-size: 1.8rem;"></i>
+                        </div>
+                    </div>
+                    <h4 class="card-title text-center" style="color: #4F3466;">Productos</h4>
+                    <p class="card-text text-center">Gestiona tu catálogo de productos con precios, stock y descripciones detalladas.</p>
+                    <div class="text-center mt-3">
+                        <a asp-controller="ProductModels" asp-action="Index" class="btn" style="background-color: #A580A6; color: white;">
+                            Ver productos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px;">
+                <div class="card-body p-4">
+                    <div class="text-center mb-3">
+                        <div style="width: 60px; height: 60px; background-color: #947CAC; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="bi bi-people text-white" style="font-size: 1.8rem;"></i>
+                        </div>
+                    </div>
+                    <h4 class="card-title text-center" style="color: #4F3466;">Usuarios</h4>
+                    <p class="card-text text-center">Administra usuarios, asigna roles y permisos dentro de la plataforma.</p>
+                    <div class="text-center mt-3">
+                        <a asp-controller="UserModels" asp-action="Index" class="btn" style="background-color: #A580A6; color: white;">
+                            Ver usuarios
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px;">
+                <div class="card-body p-4">
+                    <div class="text-center mb-3">
+                        <div style="width: 60px; height: 60px; background-color: #A580A6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="bi bi-cart3 text-white" style="font-size: 1.8rem;"></i>
+                        </div>
+                    </div>
+                    <h4 class="card-title text-center" style="color: #4F3466;">Pedidos</h4>
+                    <p class="card-text text-center">Crea y gestiona pedidos, controla el estado y realiza seguimiento de entregas.</p>
+                    <div class="text-center mt-3">
+                        <a asp-controller="OrderModels" asp-action="Index" class="btn" style="background-color: #A580A6; color: white;">
+                            Ver pedidos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+            <div class="card border-0 shadow-sm" style="border-radius: 12px; overflow: hidden; background-color: #CABCD7; background-image: linear-gradient(45deg, #CABCD7 25%, #D2C9D4 25%, #D2C9D4 50%, #CABCD7 50%, #CABCD7 75%, #D2C9D4 75%, #D2C9D4 100%); background-size: 40px 40px;">
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h3 style="color: #4F3466;">Realiza pedidos</h3>
+                            <p class="mb-md-0">Pedidos para realizar</p>
+                        </div>
+                        @* <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                            <a asp-controller="OrderModels" asp-action="CreateRapido" class="btn btn-lg" style="background-color: #4F3466; color: white;">
+                                <i class="bi bi-basket2 me-2"></i>Nuevo Pedido
+                            </a>
+                        </div> *@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

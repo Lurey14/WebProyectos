@@ -1,0 +1,47 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AplicacionPedidos.Models
+{
+    public class LoginViewModel
+    {
+        [Required(ErrorMessage = "El Email es obligatorio")]
+        [EmailAddress(ErrorMessage = "Formato de email inválido")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "La Contraseña es obligatoria")]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        [Display(Name = "Recordarme")]
+        public bool RememberMe { get; set; }
+    }
+
+    public class RegisterViewModel
+    {
+        [Required(ErrorMessage = "El Nombre es obligatorio")]
+        [StringLength(100, ErrorMessage = "El {0} debe tener al menos {2} caracteres y máximo {1}.", MinimumLength = 2)]
+        public string Nombre { get; set; }
+
+        [Required(ErrorMessage = "El Email es obligatorio")]
+        [EmailAddress(ErrorMessage = "Formato de email inválido")]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "La Contraseña es obligatoria")]
+        [StringLength(100, ErrorMessage = "La {0} debe tener al menos {2} caracteres y máximo {1}.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Contraseña")]
+        public string Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirmar contraseña")]
+        [Compare("Password", ErrorMessage = "Las contraseñas no coinciden.")]
+        public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "El Rol es obligatorio")]
+        [Display(Name = "Rol")]
+        public string Role { get; set; }
+
+        public string[] Roles { get; set; }
+    }
+}

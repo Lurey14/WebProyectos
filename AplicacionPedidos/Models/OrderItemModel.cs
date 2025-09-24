@@ -30,7 +30,6 @@ namespace AplicacionPedidos.Models
         [DataType(DataType.Currency)]
         public decimal Subtotal { get; set; }
         
-        // Método para calcular el subtotal
         public void CalcularSubtotal()
         {
             if (Producto != null)
@@ -39,7 +38,6 @@ namespace AplicacionPedidos.Models
             }
         }
         
-        // Para mantener el precio en el momento de la compra (por si el precio del producto cambia después)
         [Display(Name = "Precio Unitario")]
         [Column(TypeName = "decimal(18, 2)")]
         [DataType(DataType.Currency)]

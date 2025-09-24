@@ -2,6 +2,7 @@ wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\products\17614730-df59-4348-8008-983ffa55580e_11.jpg
 wwwroot\images\products\1c23d635-e92f-44ba-8ffe-e133bba00987_12.jpg
+wwwroot\images\products\37912d73-fda6-404e-8c46-fea94fe653ab_7.jpg
 wwwroot\images\products\b666dd20-0720-4693-911b-68f203ff68bd_5.jpg
 wwwroot\images\products\no-image.jpg
 wwwroot\js\site.js

@@ -67,14 +67,14 @@
                                 </a>
                             </li>
                             
-                            @if (!User.IsInRole("Admin") && !User.IsInRole("Empleado"))
+                            @* @if (!User.IsInRole("Admin") && !User.IsInRole("Empleado"))
                             {
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="OrderModels" asp-action="CreateRapido">
                                         <i class="bi bi-basket2"></i> Nuevo Pedido
                                     </a>
                                 </li>
-                            }
+                            } *@
                         }
                     </ul>
                     <div class="d-flex align-items-center">
