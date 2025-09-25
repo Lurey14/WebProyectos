@@ -85,13 +85,24 @@
                                     <div class="user-avatar me-2">
                                         @(User.Identity.Name?.Substring(0, 1).ToUpper() ?? "A")
                                     </div>
-                                    <span class="d-none d-md-inline">@Html.Raw(System.Web.HttpUtility.HtmlEncode(User.Identity.Name ?? "Usuario"))</span>
+                                    <span class="d-none d-md-inline">
+                                        @{
+                                            var userRol = User.IsInRole("Admin") ? "Administrativo" : 
+                                                         User.IsInRole("Cliente") ? "Cliente" : 
+                                                         User.IsInRole("Empleado") ? "Empleado" : "Usuario";
+                                        }
+                                        @Html.Raw(System.Web.HttpUtility.HtmlEncode(User.Identity.Name ?? "Usuario"))
+                                        <small class="ms-1 badge" style="background-color: #A580A6;">@userRol</small>
+                                    </span>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown" style="min-width: 200px;">
                                     <li>
                                         <span class="dropdown-item-text">
                                             <span class="d-block text-muted small">Sesión iniciada como</span>
                                             <strong>@Html.Raw(System.Web.HttpUtility.HtmlEncode(User.Identity.Name ?? "Usuario"))</strong>
+                                            <span class="d-block mt-1">
+                                                <span class="badge" style="background-color: #A580A6;">@userRol</span>
+                                            </span>
                                         </span>
                                     </li>
                                     <li><hr class="dropdown-divider"></li>
