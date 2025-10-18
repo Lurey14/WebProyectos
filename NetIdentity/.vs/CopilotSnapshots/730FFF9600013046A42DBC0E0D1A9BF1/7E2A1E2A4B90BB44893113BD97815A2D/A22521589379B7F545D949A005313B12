@@ -27,15 +27,6 @@
                         </small>
                     </div>
                     <div class="mb-3">
-                        <label for="genero" class="form-label">Genero</label>
-                        <select class="form-control" id="genero" name="genero" required>
-                            <option value="">Seleccione...</option>
-                            <option value="Femenino">Femenino</option>
-                            <option value="Masculino">Masculino</option>
-                            <option value="Otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
                         <label for="password" class="form-label">Contraseña</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                         <small class="form-text text-muted">

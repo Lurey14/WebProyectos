@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|solutionrelative:data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\controllers\\actividadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|solutionrelative:controllers\\actividadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|solutionrelative:data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\controllers\\juegoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|solutionrelative:controllers\\juegoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\controllers\\actividadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|solutionrelative:controllers\\actividadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0FC9E778-68CB-489D-851A-AE54D0B5E701}|NetIdentity.csproj|d:\\univalle\\web_iii\\2.net\\avancenet\\webproyectos\\netidentity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,72 +46,101 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Views\\Account\\Login.cshtml*",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T13:50:36.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAEwCQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-18T13:29:59.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T13:24:26.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "JuegosController.cs",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Controllers\\JuegosController.cs",
               "RelativeDocumentMoniker": "Controllers\\JuegosController.cs",
               "ToolTip": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Controllers\\JuegosController.cs",
               "RelativeToolTip": "Controllers\\JuegosController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABwAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T13:11:01.245Z"
+              "WhenOpened": "2025-10-18T13:11:01.245Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ActividadesController.cs",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Controllers\\ActividadesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ActividadesController.cs",
               "ToolTip": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Controllers\\ActividadesController.cs",
               "RelativeToolTip": "Controllers\\ActividadesController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA/wBYAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T13:07:52.351Z"
+              "WhenOpened": "2025-10-18T13:07:52.351Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T13:07:59.221Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SeedData.cs",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Data\\SeedData.cs",
               "RelativeDocumentMoniker": "Data\\SeedData.cs",
               "ToolTip": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Data\\SeedData.cs",
               "RelativeToolTip": "Data\\SeedData.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAUwC0AAABCAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwCcAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T12:30:07.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T12:58:23.822Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
@@ -115,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
