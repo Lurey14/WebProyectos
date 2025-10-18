@@ -153,3 +153,4 @@ D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\re
 D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\NetIdentity.pdb
 D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\NetIdentity.genruntimeconfig.cache
 D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\ref\NetIdentity.dll
+D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

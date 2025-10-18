@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NetIdentity.Data;
 using NetIdentity.Models;
@@ -48,7 +48,8 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminOUsuario", policy =>
         policy.RequireRole("Admin", "Usuario"));
 
-    options.AddPolicy("SoloFemenino", policy => //politica solo permite acceso a usuarios con genero femenino
+    // Política por género: solo permite acceso a usuarios con Genero Femenino
+    options.AddPolicy("SoloFemenino", policy =>
         policy.RequireClaim("Genero", "Femenino"));
 });
 
