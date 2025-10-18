@@ -71,12 +71,12 @@ namespace NetIdentity.Data
                     UserName = "menor2@test.com",
                     Email = "menor2@test.com",
                     FechaNacimiento = DateTime.Now.AddYears(-16),
-                    NombreCompleto = "Pedro Menor",
+                    NombreCompleto = "Pedro Menor2",
                     EmailConfirmed = true,
                     Genero = "Masculino"
                 };
 
-                var result = await userManager.CreateAsync(userMenor2, "Menor123!");
+                var result = await userManager.CreateAsync(userMenor2, "Menor2123!");
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(userMenor2, "Usuario");

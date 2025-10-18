@@ -64,27 +64,6 @@ namespace NetIdentity.Data
                 }
             }
 
-            if (await userManager.FindByEmailAsync("menor2@test.com") == null)
-            {
-                var userMenor2 = new ApplicationUser
-                {
-                    UserName = "menor2@test.com",
-                    Email = "menor2@test.com",
-                    FechaNacimiento = DateTime.Now.AddYears(-16),
-                    NombreCompleto = "Pedro Menor",
-                    EmailConfirmed = true,
-                    Genero = "Masculino"
-                };
-
-                var result = await userManager.CreateAsync(userMenor2, "Menor123!");
-                if (result.Succeeded)
-                {
-                    await userManager.AddToRoleAsync(userMenor2, "Usuario");
-                    await userManager.AddClaimAsync(userMenor2,
-                        new System.Security.Claims.Claim("FechaNacimiento", userMenor2.FechaNacimiento.ToString("yyyy-MM-dd")));
-                }
-            }
-
             if (await userManager.FindByEmailAsync("mayor@test.com") == null)
             {
                 var userMayor = new ApplicationUser
