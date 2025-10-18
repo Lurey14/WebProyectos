@@ -8,7 +8,6 @@ namespace NetIdentity.Models
         public string? NombreCompleto { get; set; }
         //public string genero { get; set; } //Masculino | Femenino | Otro | GeneroX | GeneroY ; M | F | O | X | Y
         //public bool isFemenino? (1) =0(masculino) | isMasculino 1|0 
-        public string? Genero { get; set; }
     }
 
 }

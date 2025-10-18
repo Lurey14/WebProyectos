@@ -6,9 +6,7 @@ namespace NetIdentity.Models
     {
         public DateTime FechaNacimiento { get; set; }
         public string? NombreCompleto { get; set; }
-        //public string genero { get; set; } //Masculino | Femenino | Otro | GeneroX | GeneroY ; M | F | O | X | Y
-        //public bool isFemenino? (1) =0(masculino) | isMasculino 1|0 
-        public string? Genero { get; set; }
+        public string? Genero { get; set; } // Masculino | Femenino | Otro | No especifica | etc.
     }
 
 }
