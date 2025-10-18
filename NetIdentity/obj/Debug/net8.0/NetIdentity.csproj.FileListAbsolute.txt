@@ -147,7 +147,6 @@ D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\st
 D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\staticwebassets.development.json
 D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\NetIdent.BE699620.Up2Date
 D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\NetIdentity.dll
 D:\Univalle\Web_III\2.Net\AvanceNet\WebProyectos\NetIdentity\obj\Debug\net8.0\refint\NetIdentity.dll
