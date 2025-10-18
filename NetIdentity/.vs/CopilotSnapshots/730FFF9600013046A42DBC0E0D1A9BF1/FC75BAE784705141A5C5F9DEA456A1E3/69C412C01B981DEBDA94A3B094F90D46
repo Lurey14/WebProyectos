@@ -23,6 +23,7 @@ namespace NetIdentity.Controllers
             return View();
         }
 
+        // Aplica la política de género
         [Authorize(Policy = "SoloFemenino")]
         public IActionResult JuegosFemeninos()
         {

@@ -52,7 +52,7 @@ namespace NetIdentity.Data
                     FechaNacimiento = DateTime.Now.AddYears(-15),
                     NombreCompleto = "Juan Menor",
                     EmailConfirmed = true,
-                    Genero = "Masculino"
+                    Genero = "Femenino"
                 };
 
                 var result = await userManager.CreateAsync(userMenor, "Menor123!");
@@ -73,7 +73,7 @@ namespace NetIdentity.Data
                     FechaNacimiento = DateTime.Now.AddYears(-25),
                     NombreCompleto = "María Mayor",
                     EmailConfirmed = true,
-                    Genero = "Femenino"
+                    Genero = "Masculino"
                 };
 
                 var result = await userManager.CreateAsync(userMayor, "Mayor123!");

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace NetIdentity.Controllers
 {
+    
     public class ActividadesController : Controller
     {
         public IActionResult Index()
@@ -24,11 +25,6 @@ namespace NetIdentity.Controllers
         {
             return View();
         }
-
-        [Authorize(Policy = "SoloFemenino")]
-        public IActionResult ActividadesFemeninas()
-        {
-            return View();
-        }
     }
+
 }
