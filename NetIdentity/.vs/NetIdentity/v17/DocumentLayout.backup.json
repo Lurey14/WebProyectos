@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
               "ToolTip": "D:\\Univalle\\Web_III\\2.Net\\AvanceNet\\WebProyectos\\NetIdentity\\Models\\ApplicationUser.cs",
               "RelativeToolTip": "Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T12:35:36.921Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-18T12:30:25.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T12:30:25.395Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Data\\SeedData.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T12:30:07.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T12:30:07.017Z"
             }
           ]
         }
