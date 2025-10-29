@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "Data\\DBPedidosContext.cs",
               "ToolTip": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\Data\\DBPedidosContext.cs",
               "RelativeToolTip": "Data\\DBPedidosContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wA8AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T00:13:40.773Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Models\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T00:11:04.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T00:11:04.542Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T00:07:08.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T00:07:08.322Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T23:51:49.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T23:51:49.024Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "Data\\DbInitializer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T01:02:05.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T01:02:05.624Z"
             },
             {
               "$type": "Document",
@@ -115,8 +111,7 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-24T00:58:27.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T00:58:27.908Z"
             },
             {
               "$type": "Document",
@@ -128,8 +123,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-24T00:33:57.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T00:33:57.638Z"
             }
           ]
         }
