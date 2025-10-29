@@ -10,7 +10,7 @@ namespace AplicacionPedidos.Data
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
-            string[] roles = { "Admin", "Cliente", "Empleado" };
+            string[] roles = { "Admin", "Cliente", "Empleado" }; //sembrado de datos crea Admin Cliente y Empleado
             foreach (var role in roles)
             {
                 if (!await roleManager.RoleExistsAsync(role))
