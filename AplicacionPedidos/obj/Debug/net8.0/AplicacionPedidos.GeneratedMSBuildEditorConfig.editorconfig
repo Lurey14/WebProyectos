@@ -17,117 +17,117 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AplicacionPedidos
 build_property.RootNamespace = AplicacionPedidos
-build_property.ProjectDir = D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos\
+build_property.ProjectDir = D:\Univalle\Web_III\Web\WebProyectos\AplicacionPedidos\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Univalle\Web_III\1.AplicacionPedido\WebProyectos\AplicacionPedidos
+build_property.MSBuildProjectDirectory = D:\Univalle\Web_III\Web\WebProyectos\AplicacionPedidos
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/Account/AccessDenied.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/Account/Login.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/Account/Register.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/Home/Index.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/Home/Privacy.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/OrderModels/Create.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/OrderModels/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJNb2RlbHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/OrderModels/CreateRapido.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/OrderModels/CreateRapido.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJNb2RlbHNcQ3JlYXRlUmFwaWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/OrderModels/Delete.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/OrderModels/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJNb2RlbHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/OrderModels/Details.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/OrderModels/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJNb2RlbHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/OrderModels/Edit.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/OrderModels/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJNb2RlbHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/OrderModels/Index.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/OrderModels/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJNb2RlbHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/ProductModels/Create.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/ProductModels/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdE1vZGVsc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/ProductModels/Delete.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/ProductModels/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdE1vZGVsc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/ProductModels/Details.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/ProductModels/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdE1vZGVsc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/ProductModels/Edit.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/ProductModels/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdE1vZGVsc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/ProductModels/Index.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/ProductModels/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdE1vZGVsc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/Shared/Error.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/UserModels/Create.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/UserModels/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1vZGVsc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/UserModels/Delete.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/UserModels/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1vZGVsc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/UserModels/Details.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/UserModels/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1vZGVsc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/UserModels/Edit.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/UserModels/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1vZGVsc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/UserModels/Index.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/UserModels/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1vZGVsc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/_ViewImports.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/_ViewStart.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Univalle/Web_III/1.AplicacionPedido/WebProyectos/AplicacionPedidos/Views/Shared/_Layout.cshtml]
+[D:/Univalle/Web_III/Web/WebProyectos/AplicacionPedidos/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-63l2i0bq96

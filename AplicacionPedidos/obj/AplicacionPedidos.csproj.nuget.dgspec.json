@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj": {}
+    "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj": {}
   },
   "projects": {
-    "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj": {
+    "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj",
+        "projectUniqueName": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj",
         "projectName": "AplicacionPedidos",
-        "projectPath": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj",
+        "projectPath": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\AplicacionPedidos.csproj",
         "packagesPath": "C:\\Users\\noemy\\.nuget\\packages\\",
-        "outputPath": "D:\\Univalle\\Web_III\\1.AplicacionPedido\\WebProyectos\\AplicacionPedidos\\obj\\",
+        "outputPath": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,6 +51,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
