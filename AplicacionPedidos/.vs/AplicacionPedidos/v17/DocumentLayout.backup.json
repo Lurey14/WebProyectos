@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:data\\dbpedidoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\web\\webproyectos\\aplicacionpedidos\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\web\\webproyectos\\aplicacionpedidos\\controllers\\usermodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:controllers\\usermodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\web\\webproyectos\\aplicacionpedidos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\web\\webproyectos\\aplicacionpedidos\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\web\\webproyectos\\aplicacionpedidos\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6C0D4E4-17B9-4E71-990C-A44997AD6F0A}|AplicacionPedidos.csproj|d:\\univalle\\web_iii\\web\\webproyectos\\aplicacionpedidos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -38,8 +42,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserModelsController.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\Controllers\\UserModelsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserModelsController.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\Controllers\\UserModelsController.cs",
+              "RelativeToolTip": "Controllers\\UserModelsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T00:43:15.907Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -48,14 +65,14 @@
               "RelativeDocumentMoniker": "Data\\DBPedidosContext.cs",
               "ToolTip": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\Data\\DBPedidosContext.cs",
               "RelativeToolTip": "Data\\DBPedidosContext.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCUAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T00:13:40.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
@@ -73,13 +90,14 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T00:07:08.322Z"
+              "WhenOpened": "2025-10-29T00:07:08.322Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -99,11 +117,12 @@
               "RelativeToolTip": "Data\\DbInitializer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T01:02:05.624Z"
+              "WhenOpened": "2025-09-24T01:02:05.624Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -115,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Univalle\\Web_III\\Web\\WebProyectos\\AplicacionPedidos\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",

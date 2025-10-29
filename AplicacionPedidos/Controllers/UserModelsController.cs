@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace AplicacionPedidos.Controllers
 {
-    [Authorize(Policy = "RequireAdminRole")]
+    [Authorize(Policy = "RequireAdminRole")] //autorizaciones y politicas
     public class UserModelsController : Controller
     {
         private readonly DBPedidosContext _context;
