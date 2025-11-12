@@ -26,7 +26,8 @@ namespace WebAPI1.Services
             {
                 Email = dto.Email,
                 UserName = dto.UserName,
-                Password = HashPassword(dto.Password)
+                Password = HashPassword(dto.Password),
+                Rol = dto.Rol
             };
 
             _appDbContext.Users.Add(user);
@@ -52,6 +53,8 @@ namespace WebAPI1.Services
                 user.Email = dto.Email;
             if (!string.IsNullOrEmpty(dto.Password))
                 user.Password = HashPassword(dto.Password);
+            if (!string.IsNullOrEmpty(dto.Rol))
+                user.Rol = dto.Rol;
             await _appDbContext.SaveChangesAsync();
             return user;
         }

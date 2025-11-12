@@ -217,7 +217,8 @@
       },
       "UpdateUserDto": {
         "required": [
-          "id"
+          "id",
+          "rol"
         ],
         "type": "object",
         "properties": {
@@ -238,6 +239,10 @@
           "password": {
             "type": "string",
             "nullable": true
+          },
+          "rol": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -246,6 +251,7 @@
         "required": [
           "email",
           "password",
+          "rol",
           "userName"
         ],
         "type": "object",
@@ -261,6 +267,10 @@
             "format": "email"
           },
           "password": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "rol": {
             "minLength": 1,
             "type": "string"
           }

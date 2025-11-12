@@ -34,7 +34,7 @@ namespace WebAPI1.Controllers
             try
             {
                 var user = await _userService.RegisterUserAsync(dto);
-                return Ok(new { message = "Usuario creado", user.Id, user.UserName });
+                return Ok(new { message = "Usuario creado", user.Id, user.UserName, user.Rol });
             }
             catch (Exception ex) {
                 return BadRequest(new { error = ex.Message });
@@ -47,7 +47,7 @@ namespace WebAPI1.Controllers
             try
             {
                 var user = await _userService.UpdateUserAsync(dto);
-                return Ok(new { message = "Usuario actualizado", user.Id, user.UserName });
+                return Ok(new { message = "Usuario actualizado", user.Id, user.UserName, user.Rol });
             }
             catch (Exception ex)
             {
