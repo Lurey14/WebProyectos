@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\models\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\models\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\models\\dtos\\proveedordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\models\\dtos\\proveedordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|d:\\univalle\\web_iii\\avance\\examenweb\\examenweb\\models\\dtos\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239D2368-A2F8-456C-A424-9D0C05B2E480}|ExamenWeb\\ExamenWeb.csproj|solutionrelative:examenweb\\models\\dtos\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 159,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Readme.md",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Readme.md",
+              "RelativeDocumentMoniker": "ExamenWeb\\Readme.md",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Readme.md",
+              "RelativeToolTip": "ExamenWeb\\Readme.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-14T00:06:07.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Program.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Program.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Program.cs",
+              "RelativeToolTip": "ExamenWeb\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:37:13.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProveedorDto.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\DTOs\\ProveedorDto.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Models\\DTOs\\ProveedorDto.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\DTOs\\ProveedorDto.cs",
+              "RelativeToolTip": "ExamenWeb\\Models\\DTOs\\ProveedorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:08:35.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Services\\ProductoService.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Services\\ProductoService.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Services\\ProductoService.cs",
+              "RelativeToolTip": "ExamenWeb\\Services\\ProductoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:36:24.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductoDto.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\DTOs\\ProductoDto.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Models\\DTOs\\ProductoDto.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\DTOs\\ProductoDto.cs",
+              "RelativeToolTip": "ExamenWeb\\Models\\DTOs\\ProductoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:08:08.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Proveedor.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\Proveedor.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Models\\Proveedor.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\Proveedor.cs",
+              "RelativeToolTip": "ExamenWeb\\Models\\Proveedor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:07:40.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Models\\Producto.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\Producto.cs",
+              "RelativeToolTip": "ExamenWeb\\Models\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:07:19.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Controllers\\ProductoController.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "ExamenWeb\\Controllers\\ProductoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:35:37.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "ExamenWeb\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:05:26.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoriaDto.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\DTOs\\CategoriaDto.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Models\\DTOs\\CategoriaDto.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\DTOs\\CategoriaDto.cs",
+              "RelativeToolTip": "ExamenWeb\\Models\\DTOs\\CategoriaDto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wBkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:08:23.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "ExamenWeb\\Models\\Categoria.cs",
+              "ToolTip": "D:\\Univalle\\Web_III\\Avance\\ExamenWeb\\ExamenWeb\\Models\\Categoria.cs",
+              "RelativeToolTip": "ExamenWeb\\Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T23:07:30.299Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
