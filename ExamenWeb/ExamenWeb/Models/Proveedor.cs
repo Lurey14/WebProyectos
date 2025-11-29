@@ -4,6 +4,7 @@ namespace ExamenWeb.Models
 {
     public class Proveedor
     {
+        [Key]
         public int IdProveedor { get; set; }
         [Required, MaxLength(100)]
         public string RazonSocial { get; set; } = string.Empty;

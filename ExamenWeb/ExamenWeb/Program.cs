@@ -8,6 +8,7 @@ builder.Services.AddDbContext<AppDbContext>(
     options => options.UseInMemoryDatabase("ProductoDB"));
 
 builder.Services.AddScoped<ProductoService>();
+builder.Services.AddScoped<DragonService>();
 
 // Add services to the container.
 
