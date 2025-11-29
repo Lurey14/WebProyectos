@@ -14,8 +14,7 @@ namespace ExamenWeb.Services
         }
         public async Task<List<Dragon>> GetAllDragonAsync()
         {
-            var dragon = _appDbContext.Dragons.ToListAsync();
-            return await dragon;
+            return await _appDbContext.Dragons.ToListAsync();
         }
         public async Task<Dragon> RegisterDragonAsync(DragonDto dto)
         {
