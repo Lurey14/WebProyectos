@@ -4,6 +4,7 @@ namespace ExamenWeb.Models
 {
     public class Producto
     {
+        [Key]
         public int IdProducto { get; set; }
         [Required, MaxLength(100)]
         public string NombreProducto { get; set; } = string.Empty;

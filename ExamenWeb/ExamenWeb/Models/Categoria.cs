@@ -4,6 +4,7 @@ namespace ExamenWeb.Models
 {
     public class Categoria
     {
+        [Key]
         public int IdCategoria { get; set; }
         [Required, MaxLength(100)]
         public string NombreCategoria { get; set; } = string.Empty;
